@@ -3,10 +3,9 @@ import { ThemeProvider } from 'next-themes';
 
 import '@/styles/main.scss';
 
-// !CHANGETHIS
 export const metadata: Metadata = {
-  title: 'CHANGE THIS',
-  description: 'CHANGE THIS',
+  title: 'HOLAA',
+  description: 'A demo movie app',
 };
 
 export default function RootLayout({
