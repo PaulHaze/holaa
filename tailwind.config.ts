@@ -74,9 +74,9 @@ export default {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-bg': 'linear-gradient(95deg, #181818 7.27%, #151515 99.21%)',
         'gradient-color':
-          'linear-gradient(92deg, #5a0dff 0%,#ff29b8 38.6%,#ff581c 97.73%)',
-        'gradient-secondary':
-          'linear-gradient(92deg,#5a0dff 0%#ff29b8 38.6%,#ff581c 97.73%)',
+          'linear-gradient(to right, #5a0dff -5%, #FF29B8 31.0%, #FF581C)',
+        'gradient-other':
+          'linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%)',
       },
     },
   },

@@ -9,7 +9,7 @@ export default function Home() {
       <div className="flex flex-col items-center pt-10">
         <h1>Holaa Movie App</h1>
       </div>
-      <div className="bg-gradient-bg my-10 flex flex-col items-center py-10 bb">
+      <div className="bg-gradient-other my-10 flex flex-col items-center py-10 bb">
         <h1>Test DIv</h1>
       </div>
     </div>
