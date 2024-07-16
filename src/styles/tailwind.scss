@@ -3,20 +3,30 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: var(--body-font);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-heading;
+  }
   h1 {
-    @apply text-4xl font-normal leading-normal;
+    @apply text-6xl font-normal leading-normal;
   }
   h2 {
-    @apply text-3xl font-normal leading-normal;
+    @apply text-5xl font-normal leading-normal;
   }
   h3 {
-    @apply text-2xl font-normal leading-normal;
+    @apply text-4xl font-normal leading-normal;
   }
   h4 {
-    @apply text-xl font-normal leading-normal;
+    @apply text-3xl font-normal leading-normal;
   }
   h5 {
-    @apply text-lg font-normal leading-normal;
+    @apply text-xl font-normal leading-normal;
   }
 }
 

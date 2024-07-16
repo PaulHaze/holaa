@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-import typographyPlugin from '@tailwindcss/typography';
+// import typographyPlugin from '@tailwindcss/typography';
 import daisyui from 'daisyui';
 import plugin from 'tailwindcss/plugin';
 
@@ -7,6 +7,13 @@ export default {
   content: ['./src/**/*.{js,ts,jsx,tsx,json}'],
   darkMode: 'selector',
   theme: {
+    fontFamily: {
+      sans: ['var(--body-font)'],
+      body: ['var(--body-font)'],
+      heading: ['var(--heading-font)'],
+      secondary: ['var(--jost-font)'],
+      narrow: ['var(--bigShoulder-font)'],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -81,7 +88,7 @@ export default {
     },
   },
   plugins: [
-    typographyPlugin,
+    // typographyPlugin,
     daisyui,
     plugin(({ addUtilities, matchUtilities, theme }) => {
       addUtilities({
