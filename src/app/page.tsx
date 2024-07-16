@@ -6,8 +6,11 @@ export default function Home() {
       <div className="absolute right-2 top-3">
         <ThemeToggle />
       </div>
-      <div className="test-bg flex flex-col items-center pt-10">
+      <div className="flex flex-col items-center pt-10">
         <h1>Holaa Movie App</h1>
+      </div>
+      <div className="bg-gradient-bg my-10 flex flex-col items-center py-10 bb">
+        <h1>Test DIv</h1>
       </div>
     </div>
   );

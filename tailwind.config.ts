@@ -43,6 +43,7 @@ export default {
       center: true,
     },
     extend: {
+      colors: {},
       minWidth: {
         xs: '431px',
         sm: '640px',
@@ -71,6 +72,11 @@ export default {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-bg': 'linear-gradient(95deg, #181818 7.27%, #151515 99.21%)',
+        'gradient-color':
+          'linear-gradient(92deg, #5a0dff 0%,#ff29b8 38.6%,#ff581c 97.73%)',
+        'gradient-secondary':
+          'linear-gradient(92deg,#5a0dff 0%#ff29b8 38.6%,#ff581c 97.73%)',
       },
     },
   },
@@ -206,7 +212,7 @@ export default {
           secondary: '#1F3A5F',
           accent: '#cee8ff',
           neutral: '#454b4e',
-          'base-100': '#0F1C2E',
+          'base-100': '#101010',
           'base-200': '#1f2b3e',
           'base-300': '#374357',
           '--primary-muted-oklch': '81.3% 0.068 264.49',
