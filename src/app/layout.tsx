@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 
-import '@/styles/main.scss';
+import '@/styles/global.scss';
 
 export const metadata: Metadata = {
   title: 'HOLAA',

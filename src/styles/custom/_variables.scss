@@ -1,0 +1,34 @@
+/*=========================
+    Variables 
+==========================*/
+:root {
+  --primary-color: #fff;
+  --secondary-color: #e2e2e2;
+  --heading-color: #fff;
+  --paragraph-color: #999;
+  --body-bg: #101010;
+
+  --heading-font: 'Lowball', sans-serif;
+  --secondary-font: 'Dosis', sans-serif;
+  --body-font: 'Dosis', sans-serif;
+  --jost-font: 'Jost', sans-serif;
+  --bigShoulder-font: 'Big Shoulders Display', sans-serif;
+
+  --transition: all 300ms ease-out;
+  // --animate-delay: 0.3s;
+
+  --bg-primary: linear-gradient(95deg, #181818 7.27%, #151515 99.21%);
+
+  --gradient-color: linear-gradient(
+    to right,
+    #5a0dff -5%,
+    #ff29b8 31%,
+    #ff581c
+  );
+  --bg-gradient: linear-gradient(
+    92deg,
+    #5a0dff 0%,
+    #ff29b8 38.6%,
+    #ff581c 97.73%
+  );
+}
