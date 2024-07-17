@@ -14,7 +14,7 @@
     @apply font-heading;
   }
   h1 {
-    @apply text-6xl font-normal leading-normal;
+    @apply text-6xl font-normal leading-normal md:text-7xl lg:text-banner;
   }
   h2 {
     @apply text-5xl font-normal leading-normal;
@@ -26,7 +26,7 @@
     @apply text-3xl font-normal leading-normal;
   }
   h5 {
-    @apply text-xl font-normal leading-normal;
+    @apply text-2xl font-normal leading-normal;
   }
 }
 
