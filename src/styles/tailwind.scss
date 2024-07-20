@@ -11,22 +11,22 @@
   h3,
   h4,
   h5 {
-    @apply font-heading;
+    @apply font-heading font-normal leading-normal;
   }
   h1 {
-    @apply text-6xl font-normal leading-normal md:text-7xl lg:text-banner;
+    @apply text-6xl md:text-7xl lg:text-banner;
   }
   h2 {
-    @apply text-5xl font-normal leading-normal;
+    @apply text-5xl;
   }
   h3 {
-    @apply text-4xl font-normal leading-normal;
+    @apply text-4xl;
   }
   h4 {
-    @apply text-3xl font-normal leading-normal;
+    @apply text-3xl;
   }
   h5 {
-    @apply text-2xl font-normal leading-normal;
+    @apply text-2xl;
   }
 }
 

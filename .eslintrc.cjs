@@ -32,6 +32,7 @@ module.exports = {
         tsconfigRootDir: __dirname,
       },
       rules: {
+        'spaced-comment': ['off'],
         'no-undef': 'error',
         'react/destructuring-assignment': 'off', // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
         'jsx-a11y/anchor-is-valid': 'off', // Next.js uses its own internal link system
@@ -66,21 +67,21 @@ module.exports = {
       },
     },
     // Configuration for unit/rtl testing
-    {
-      files: ['**/*.test.ts', '**/*.test.tsx'],
-      plugins: ['vitest', 'jest-formatting', 'testing-library', 'jest-dom'],
-      extends: [
-        'plugin:vitest/recommended',
-        'plugin:jest-formatting/recommended',
-        'plugin:testing-library/react',
-        'plugin:jest-dom/recommended',
-      ],
-    },
+    // {
+    //   files: ['**/*.test.ts', '**/*.test.tsx'],
+    //   plugins: ['vitest', 'jest-formatting', 'testing-library', 'jest-dom'],
+    //   extends: [
+    //     'plugin:vitest/recommended',
+    //     'plugin:jest-formatting/recommended',
+    //     'plugin:testing-library/react',
+    //     'plugin:jest-dom/recommended',
+    //   ],
+    // },
     // Configuration for e2e testing (Playwright)
-    {
-      files: ['**/*.spec.ts'],
-      extends: ['plugin:playwright/recommended'],
-    },
+    // {
+    //   files: ['**/*.spec.ts'],
+    //   extends: ['plugin:playwright/recommended'],
+    // },
   ],
   globals: {
     React: true,
