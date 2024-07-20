@@ -3,6 +3,8 @@ import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
 import { Dosis, Jost, Big_Shoulders_Display } from 'next/font/google';
 
+import { UiProvider } from '@/context/UiContext';
+
 import '@/styles/global.scss';
 
 //#region FONTS
@@ -95,7 +97,9 @@ export default function RootLayout({
       <body
         className={`${lowball.variable} ${dosisBody.variable} ${jost.variable} ${bigShouldersDisplay.variable} bg-base-100`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <UiProvider>{children}</UiProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

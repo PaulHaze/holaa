@@ -10,10 +10,6 @@ import type {
   SetStateAction,
 } from 'react';
 
-interface Props {
-  children: ReactNode;
-}
-
 interface UiContextType {
   isFixedTop: boolean;
   openSubMenuIndex: number | null;
@@ -24,11 +20,15 @@ interface UiContextType {
   scrollToTop: () => void;
 }
 
+interface Props {
+  children: ReactNode;
+}
+
 const UiContext = createContext<UiContextType | null>(null);
 
 export const useUiContext = () => useContext(UiContext);
 
-export const ThemeProvider = ({ children }: Props) => {
+export const UiProvider = ({ children }: Props) => {
   const [isFixedTop, setIsFixedTop] = useState(false);
   const [openSubMenuIndex, setOpenSubMenuIndex] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
