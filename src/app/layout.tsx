@@ -3,7 +3,7 @@ import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
 import { Dosis, Jost, Big_Shoulders_Display } from 'next/font/google';
 
-import { NavBar } from '@/components/ui';
+import { NavBar } from '@/components/header';
 import { UiProvider } from '@/context/UiContext';
 
 import '@/styles/global.scss';

@@ -1,4 +1,4 @@
-import { NavBar } from '@/components/ui/NavBar';
+import { NavBar } from '@/components/header/nav/NavBar';
 
 interface HeaderOneProps {
   isHero: boolean;
