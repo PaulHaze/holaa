@@ -1,22 +1,21 @@
 import { useState, useEffect } from 'react';
 
 export function useScrollDirection() {
-  const [position, setPosition] = useState(window.scrollY);
-  const [isVisible, setIsVisible] = useState(true);
+  const [position, setPosition] = useState(
+    typeof window !== 'undefined' ? window.scrollY : 0,
+  );
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleScroll = () => {
-        const moving = window.scrollY;
-        setIsVisible(position > moving);
-        setPosition(moving);
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }
-    return undefined;
+    const handleScroll = () => {
+      const moving = window.scrollY;
+      setIsScrollingUp(position > moving);
+      setPosition(moving);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   });
-  return { isVisible };
+  return { isScrollingUp };
 }

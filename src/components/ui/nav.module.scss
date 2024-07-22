@@ -1,5 +1,5 @@
 .navbar {
-  @apply sticky top-0 z-[99] h-[64px] w-full bg-white/50 transition-all;
+  @apply sticky top-0 z-[99] flex h-[64px] w-full items-center justify-between bg-base-100 px-2 transition-all;
 }
 
 .showNav {

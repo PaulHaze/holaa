@@ -1,34 +1,24 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import styles from './nav.module.scss';
+import { ThemeToggle } from './ThemeToggle';
+
+import { useScrollDirection } from '@/hooks/useScrollDirection';
 
 import { cn } from '@/utils/clsxm';
+import styles from './nav.module.scss';
 
 export function NavBar() {
-  const [position, setPosition] = useState(window.scrollY);
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleScroll = () => {
-        const moving = window.scrollY;
-        setVisible(position > moving);
-        setPosition(moving);
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }
-    return undefined;
-  });
+  const { isScrollingUp } = useScrollDirection();
 
   return (
     <div
-      className={cn(styles.navbar, visible ? styles.showNav : styles.hideNav)}
+      className={cn(
+        styles.navbar,
+        isScrollingUp ? styles.showNav : styles.hideNav,
+      )}
     >
-      <p>NavBar Placeholder</p>
+      <p>LOGO</p>
+      <ThemeToggle />
     </div>
   );
 }
