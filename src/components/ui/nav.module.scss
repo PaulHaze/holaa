@@ -1,5 +1,5 @@
 .navbar {
-  @apply h-[64px] w-full bg-white transition-all;
+  @apply sticky top-0 z-[99] h-[64px] w-full bg-white/50 transition-all;
 }
 
 .showNav {
@@ -7,5 +7,5 @@
 }
 
 .hideNav {
-  transform: translateY(-64px);
+  transform: translateY(-100%);
 }
