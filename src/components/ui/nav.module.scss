@@ -1,0 +1,11 @@
+.navbar {
+  @apply h-[64px] w-full bg-white transition-all;
+}
+
+.showNav {
+  transform: translateY(0);
+}
+
+.hideNav {
+  transform: translateY(-64px);
+}
