@@ -50,6 +50,7 @@ const lowball = localFont({
   adjustFontFallback: false,
   display: 'swap',
   variable: '--heading-font',
+  preload: false,
 });
 
 const dosisBody = Dosis({
@@ -57,6 +58,7 @@ const dosisBody = Dosis({
   variable: '--body-font',
   display: 'swap',
   adjustFontFallback: false,
+  preload: false,
 });
 
 const jost = Jost({
@@ -64,6 +66,7 @@ const jost = Jost({
   variable: '--jost-font',
   display: 'swap',
   adjustFontFallback: false,
+  preload: false,
 });
 
 const bigShouldersDisplay = Big_Shoulders_Display({
@@ -71,6 +74,7 @@ const bigShouldersDisplay = Big_Shoulders_Display({
   variable: '--bigShoulder-font',
   display: 'swap',
   adjustFontFallback: false,
+  preload: false,
 });
 //#endregion
 
