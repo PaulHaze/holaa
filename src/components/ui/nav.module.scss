@@ -1,5 +1,8 @@
 .navbar {
-  @apply sticky top-0 z-[99] mx-auto flex h-[64px] w-full max-w-lg items-center justify-between bg-base-100/80 px-2 backdrop-blur-sm transition-all;
+  @apply sticky top-0 z-[99] flex h-[64px] w-full items-center bg-base-100/80 px-4 backdrop-blur-sm transition-transform lg:px-0;
+  > .content {
+    @apply mx-auto flex h-full w-full max-w-lg items-center justify-between;
+  }
 }
 
 .showNav {
@@ -9,5 +12,5 @@
 
 .hideNav {
   @apply duration-700 ease-in-out;
-  transform: translateY(-100%);
+  transform: translateY(-105%);
 }

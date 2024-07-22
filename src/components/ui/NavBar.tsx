@@ -17,8 +17,10 @@ export function NavBar() {
         isScrollingUp ? styles.showNav : styles.hideNav,
       )}
     >
-      <p>LOGO</p>
-      <ThemeToggle />
+      <div className={styles.content}>
+        <p>LOGO</p>
+        <ThemeToggle />
+      </div>
     </div>
   );
 }
