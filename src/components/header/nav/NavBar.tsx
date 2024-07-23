@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
@@ -6,10 +7,10 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 import { useUiContext } from '@/context/UiContext';
+import { useScrollDirection } from '@/hooks/useScrollDirection';
+import { menuOneData as data } from '@/data/menu';
 
 import { ThemeToggle } from './ThemeToggle';
-
-import { useScrollDirection } from '@/hooks/useScrollDirection';
 
 import { cn } from '@/utils/clsxm';
 import styles from './nav.module.scss';
@@ -25,7 +26,7 @@ export function NavBar() {
       )}
     >
       <div className={styles.content}>
-        <p>LOGO</p>
+        <Image src={data.logo} alt="logo" />
         <ThemeToggle />
       </div>
     </div>
