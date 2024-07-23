@@ -7,7 +7,7 @@ interface HeaderOneProps {
 
 export function HeaderOne({ isHero = false, data = null }: HeaderOneProps) {
   return (
-    <header className="header navbar-area relative">
+    <header className="">
       {isHero && <h5>HERO</h5>}
       {data?.breadcrumb && <p>BREADCRUMB</p>}
       <NavBar />
