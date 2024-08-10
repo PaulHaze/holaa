@@ -23,14 +23,14 @@ interface UiContextType {
 interface Props {
   children: ReactNode;
 }
-const UiContext = createContext<UiContextType | null>(null);
+const UiContext = createContext<UiContextType>({} as UiContextType);
 
 export const useUiContext = () => {
-  const uiContext = useContext(UiContext);
-  if (!uiContext) {
+  const ctx = useContext(UiContext);
+  if (!ctx) {
     throw new Error('useUiContext has to be used within <UiContext.Provider>');
   }
-  return uiContext;
+  return ctx;
 };
 
 export const UiProvider = ({ children }: Props) => {
