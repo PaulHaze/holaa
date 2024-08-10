@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import type { SyntheticEvent } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -19,6 +20,8 @@ export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
   const { toggleMobileMenu } = useUiContext();
 
+  console.log(toggleMobileMenu);
+
   const [showBox, setShowBox] = useState(false);
 
   const pathName = usePathname();
@@ -36,13 +39,24 @@ export function NavBar() {
     };
   }, []);
 
-  const checkActiveMenu = (menu) => {
+  const checkActiveMenu = (menu: Menu) => {
     if (menu.href === '#' && menu.subMenus && menu.subMenus.length > 0) {
-      return menu.subMenus.find((subMenu) => subMenu.href === routePath)
+      return menu.subMenus.find(
+        (subMenu: SubMenu) => subMenu.href === routePath,
+      )
         ? 'active'
         : '';
     }
     return routePath === menu.href ? 'active' : '';
+  };
+
+  const toggleSearchBox = (e: SyntheticEvent) => {
+    e.stopPropagation();
+    setShowBox(!showBox);
+  };
+
+  const stopPropagation = (e: SyntheticEvent) => {
+    e.stopPropagation();
   };
 
   return (

@@ -23,10 +23,15 @@ interface UiContextType {
 interface Props {
   children: ReactNode;
 }
-
 const UiContext = createContext<UiContextType | null>(null);
 
-export const useUiContext = () => useContext(UiContext);
+export const useUiContext = () => {
+  const uiContext = useContext(UiContext);
+  if (!uiContext) {
+    throw new Error('useUiContext has to be used within <UiContext.Provider>');
+  }
+  return uiContext;
+};
 
 export const UiProvider = ({ children }: Props) => {
   const [isFixedTop, setIsFixedTop] = useState(false);

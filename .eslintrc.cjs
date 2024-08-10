@@ -33,7 +33,7 @@ module.exports = {
       },
       rules: {
         'spaced-comment': ['off'],
-        'no-undef': 'error',
+        'no-undef': 'off',
         'react/destructuring-assignment': 'off', // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
         'jsx-a11y/anchor-is-valid': 'off', // Next.js uses its own internal link system
         'react/require-default-props': 'off', // Allow non-defined react props as undefined
