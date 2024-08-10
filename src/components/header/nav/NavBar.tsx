@@ -19,7 +19,7 @@ export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
 
   return (
-    <div
+    <nav
       className={cn(
         styles.navbar,
         isScrollingUp ? styles.showNav : styles.hideNav,
@@ -29,6 +29,6 @@ export function NavBar() {
         <Image src={data.logo} alt="logo" />
         <ThemeToggle />
       </div>
-    </div>
+    </nav>
   );
 }
