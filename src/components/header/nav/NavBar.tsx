@@ -17,6 +17,33 @@ import styles from './nav.module.scss';
 
 export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
+  const { toggleMobileMenu } = useUiContext();
+
+  const [showBox, setShowBox] = useState(false);
+
+  const pathName = usePathname();
+  const routePath = pathName === '/' ? pathName : pathName.replace(/^\/+/g, '');
+
+  // Close search box on click anywhere in window
+  useEffect(() => {
+    const closeSearch = () => {
+      setShowBox(false);
+    };
+    window.addEventListener('click', closeSearch);
+
+    return () => {
+      window.removeEventListener('click', closeSearch);
+    };
+  }, []);
+
+  const checkActiveMenu = (menu) => {
+    if (menu.href === '#' && menu.subMenus && menu.subMenus.length > 0) {
+      return menu.subMenus.find((subMenu) => subMenu.href === routePath)
+        ? 'active'
+        : '';
+    }
+    return routePath === menu.href ? 'active' : '';
+  };
 
   return (
     <nav
