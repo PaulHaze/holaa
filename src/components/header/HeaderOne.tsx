@@ -5,10 +5,10 @@ interface HeaderOneProps {
   data: any;
 }
 
-export function HeaderOne({ isHero = false, data = null }: HeaderOneProps) {
+export function HeaderOne({ isHero = true, data = null }: HeaderOneProps) {
   return (
-    <header className="header navbar-area relative">
-      {isHero && <h5>HERO</h5>}
+    <header className="header navbar-area relative z-[99]">
+      {isHero && <h5 className="pt-[1000px]">HERO</h5>}
       {data?.breadcrumb && <p>BREADCRUMB</p>}
       <NavBar />
     </header>

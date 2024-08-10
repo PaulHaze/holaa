@@ -2,7 +2,7 @@ import { HeaderOne } from '@/components/header';
 
 export default function Home() {
   return (
-    <div className="">
+    <main>
       <HeaderOne isHero={false} data={null} />
       <div>
         <div className="flex h-[400px] flex-col items-center justify-center pt-10">
@@ -12,6 +12,6 @@ export default function Home() {
           Scroll Content
         </div>
       </div>
-    </div>
+    </main>
   );
 }
