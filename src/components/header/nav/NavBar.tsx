@@ -16,6 +16,9 @@ import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/utils/clsxm';
 import styles from './nav.module.scss';
 
+import navIcon from '~/images/icons/nav-icon.svg';
+import navChevron from '~/images/icons/nav-chevron.svg';
+
 export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
   const { toggleMobileMenu } = useUiContext();
@@ -65,7 +68,7 @@ export function NavBar() {
         isScrollingUp ? styles.showNav : styles.hideNav,
       )}
     >
-      <div className="mx-auto flex h-full w-full max-w-lg items-center justify-between">
+      <div className="mx-auto flex w-full max-w-lg items-center justify-between">
         {/* LOGO */}
         <Link href="/" className="main-logo flex-shrink-0">
           <Image src={data.logo} alt="logo" />
@@ -75,16 +78,46 @@ export function NavBar() {
         <div className="hidden lg:inline-block">
           {data.menus && data.menus.length > 0 && (
             <ul className="main-menu flex gap-x-5">
-              {data.menus.map((menu, index) => (
+              {data.menus.map((menu) => (
                 <li
-                  key={index}
+                  key={menu.name}
                   className={`menu-item ${
                     menu.subMenus &&
                     menu.subMenus.length > 0 &&
                     'menu-item-has-children'
                   }`}
                 >
-                  LINK
+                  <Link
+                    href={menu.href}
+                    className={`menu-link flex ${checkActiveMenu(menu)}`}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                    >
+                      <path
+                        opacity="0.4"
+                        d="M6.57373 12.3083H11.4266"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M1 10.3704C1 5.8656 1.51241 6.18 4.27061 3.728C5.47737 2.7968 7.35509 1 8.97662 1C10.5973 1 12.5126 2.788 13.7302 3.728C16.4884 6.18 17 5.8656 17 10.3704C17 17 15.3651 17 8.99999 17C2.63489 17 1 17 1 10.3704Z"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span>{menu.name}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
