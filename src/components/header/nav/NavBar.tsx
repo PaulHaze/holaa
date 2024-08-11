@@ -16,6 +16,8 @@ import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/utils/clsxm';
 import styles from './nav.module.scss';
 
+import { MenuIcon } from '@/components/ui/icons';
+
 import navIcon from '~/images/icons/nav-icon.svg';
 import navChevron from '~/images/icons/nav-chevron.svg';
 
@@ -77,7 +79,7 @@ export function NavBar() {
         {/* LINKS */}
         <div className="hidden lg:inline-block">
           {data.menus && data.menus.length > 0 && (
-            <ul className="main-menu flex gap-x-5">
+            <ul className="main-menu flex gap-x-7">
               {data.menus.map((menu) => (
                 <li
                   key={menu.name}
@@ -91,31 +93,9 @@ export function NavBar() {
                     href={menu.href}
                     className={`menu-link flex ${checkActiveMenu(menu)}`}
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M6.57373 12.3083H11.4266"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M1 10.3704C1 5.8656 1.51241 6.18 4.27061 3.728C5.47737 2.7968 7.35509 1 8.97662 1C10.5973 1 12.5126 2.788 13.7302 3.728C16.4884 6.18 17 5.8656 17 10.3704C17 17 15.3651 17 8.99999 17C2.63489 17 1 17 1 10.3704Z"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <div className="mr-0.5 mt-0.5 h-5 w-5">
+                      <MenuIcon className="h-full w-full" />
+                    </div>
                     <span>{menu.name}</span>
                   </Link>
                 </li>
@@ -125,7 +105,9 @@ export function NavBar() {
         </div>
 
         {/* SEARCH + HAMBURGER */}
-        <ThemeToggle />
+        <div className="ml-10">
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   );
