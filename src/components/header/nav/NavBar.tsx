@@ -19,6 +19,7 @@ import styles from './nav.module.scss';
 export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
   const { toggleMobileMenu } = useUiContext();
+
   const [showBox, setShowBox] = useState(false);
 
   const pathName = usePathname();
@@ -59,12 +60,38 @@ export function NavBar() {
   return (
     <nav
       className={cn(
+        'nav-container start-50 translate-middle-x',
         styles.navbar,
         isScrollingUp ? styles.showNav : styles.hideNav,
       )}
     >
-      <div className={styles.content}>
-        <Image src={data.logo} alt="logo" />
+      <div className="mx-auto flex h-full w-full max-w-lg items-center justify-between">
+        {/* LOGO */}
+        <Link href="/" className="main-logo flex-shrink-0">
+          <Image src={data.logo} alt="logo" />
+        </Link>
+
+        {/* LINKS */}
+        <div className="hidden lg:inline-block">
+          {data.menus && data.menus.length > 0 && (
+            <ul className="main-menu flex gap-x-5">
+              {data.menus.map((menu, index) => (
+                <li
+                  key={index}
+                  className={`menu-item ${
+                    menu.subMenus &&
+                    menu.subMenus.length > 0 &&
+                    'menu-item-has-children'
+                  }`}
+                >
+                  LINK
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        {/* SEARCH + HAMBURGER */}
         <ThemeToggle />
       </div>
     </nav>

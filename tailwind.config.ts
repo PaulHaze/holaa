@@ -108,7 +108,7 @@ export default {
           },
         },
         '.bb2': {
-          borderWidth: '1px',
+          borderWidth: '2px',
           'border-color': '#3b82f6',
 
           '@media (min-width: 431px)': {
@@ -124,7 +124,7 @@ export default {
             'border-color': '#64748b',
           },
           '@media (min-width: 1280px)': {
-            'border-color': '#1e3a8a',
+            'border-color': '#087a0c',
           },
         },
       });
