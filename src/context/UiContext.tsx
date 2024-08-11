@@ -23,6 +23,7 @@ interface UiContextType {
 interface Props {
   children: ReactNode;
 }
+
 const UiContext = createContext<UiContextType>({} as UiContextType);
 
 export const useUiContext = () => {

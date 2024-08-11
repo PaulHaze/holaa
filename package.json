@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dv": "next dev --turbo",
+    "dev": "next dev",
+    "dev-ip": "next dev -H 192.168.1.102",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

@@ -19,9 +19,6 @@ import styles from './nav.module.scss';
 export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
   const { toggleMobileMenu } = useUiContext();
-
-  console.log(toggleMobileMenu);
-
   const [showBox, setShowBox] = useState(false);
 
   const pathName = usePathname();
