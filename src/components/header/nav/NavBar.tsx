@@ -100,14 +100,14 @@ export function NavBar() {
         <div className="hidden lg:inline-block">
           {data.menus?.length && (
             <ul className="main-menu flex gap-x-7">
-              {data.menus.map((menu: Menu) => (
+              {data.menus.map((menu: Menu, index) => (
                 <li
-                  key={menu.name}
+                  key={index}
                   className={`menu-item ${
                     menu.subMenus?.length && 'menu-item-has-children'
                   }`}
                 >
-                  {/* MAIN MENU ITEM */}
+                  {/* TOP MENU ITEM */}
                   <Link
                     href={menu.href}
                     className={`menu-link flex ${checkActiveMenu(menu)}`}
