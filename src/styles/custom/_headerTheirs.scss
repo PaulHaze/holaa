@@ -15,9 +15,6 @@
         padding: 18px 12px 18px 18px;
         background-color: transparent;
         border: none;
-        @media #{$lg_mobile} {
-          width: 215px;
-        }
       }
       button {
         box-shadow: none;
@@ -31,9 +28,6 @@
       top: 100%;
       visibility: visible;
       opacity: 1;
-      @media #{$sm_mobile} {
-        margin-right: -35px;
-      }
     }
   }
 }

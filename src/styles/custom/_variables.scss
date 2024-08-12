@@ -32,3 +32,33 @@
     #ff581c 97.73%
   );
 }
+
+// Layouts Variation
+$xxxl_device: 'only screen and (min-width: 2399px)';
+$xxl_device: 'only screen and (min-width: 1699px)';
+$xl_device: 'only screen and (max-width: 1599px)';
+$laptop_device: 'only screen and (min-width: 1199px) and (max-width: 1599px)';
+$laptop_device_two: 'only screen and (min-width: 1300px) and (max-width: 1599px)';
+$lg_device: 'only screen and (max-width: 1199px)';
+$lg_device_two: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md_device: 'only screen and (max-width: 991px)';
+$sm_device: 'only screen and (max-width: 767px)';
+$lg_mobile: 'only screen and (max-width: 575px)';
+$sm_mobile: 'only screen and (max-width: 360px)';
+
+// Layouts Variation
+$extra-lg-device: 'only screen and (max-width: 1600px)';
+
+$extra-device: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+
+$md-layout: 'only screen and (min-width: 768px) and (max-width: 991px)';
+
+$sm-layout: 'only screen and (min-width: 576px) and (max-width: 767px)';
+
+$lg-mobile: 'only screen and (max-width: 575px)';
+
+$sm-mobile: 'only screen and (max-width: 479px)';
