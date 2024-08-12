@@ -1,10 +1,11 @@
-type Menu = {
+type SubMenu = {
   name: string;
   href: string;
   subMenus?: SubMenu[];
 };
 
-type SubMenu = {
+type Menu = {
   name: string;
   href: string;
+  subMenus?: SubMenu[];
 };

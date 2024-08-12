@@ -16,7 +16,7 @@ import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/utils/clsxm';
 import styles from './nav.module.scss';
 
-import { MenuIcon } from '@/components/ui/icons';
+import { MenuIcon, MenuChevron } from '@/components/ui/icons';
 
 export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
@@ -59,15 +59,38 @@ export function NavBar() {
     e.stopPropagation();
   };
 
+  const renderSubMenu = (subMenus: SubMenu[], parentRoutePath: string) => (
+    <ul className="sub-menu">
+      {subMenus.map((subMenu, index) => (
+        <li
+          key={index}
+          className={`sub-menu--item ${
+            subMenu.subMenus?.length ? 'menu-item menu-item-has-children' : ''
+          }`}
+        >
+          <Link
+            href={subMenu.href}
+            className={`sub-menu--link ${
+              parentRoutePath === subMenu.href ? 'active' : ''
+            }`}
+          >
+            {subMenu.name}
+          </Link>
+          {subMenu.subMenus && renderSubMenu(subMenu.subMenus, parentRoutePath)}
+        </li>
+      ))}
+    </ul>
+  );
+
   return (
     <nav
       className={cn(
-        'nav-container start-50 translate-middle-x',
+        'nav-container start-50 translate-middle-x inline-block',
         styles.navbar,
         isScrollingUp ? styles.showNav : styles.hideNav,
       )}
     >
-      <div className="mx-auto flex w-full max-w-lg items-center justify-between">
+      <div className="mx-auto flex w-full max-w-lg items-center justify-between gap-x-7">
         {/* LOGO */}
         <Link href="/" className="main-logo flex-shrink-0">
           <Image src={data.logo} alt="logo" />
@@ -75,17 +98,16 @@ export function NavBar() {
 
         {/* LINKS */}
         <div className="hidden lg:inline-block">
-          {data.menus && data.menus.length > 0 && (
+          {data.menus?.length && (
             <ul className="main-menu flex gap-x-7">
-              {data.menus.map((menu) => (
+              {data.menus.map((menu: Menu) => (
                 <li
                   key={menu.name}
                   className={`menu-item ${
-                    menu.subMenus &&
-                    menu.subMenus.length > 0 &&
-                    'menu-item-has-children'
+                    menu.subMenus?.length && 'menu-item-has-children'
                   }`}
                 >
+                  {/* MAIN MENU ITEM */}
                   <Link
                     href={menu.href}
                     className={`menu-link flex ${checkActiveMenu(menu)}`}
@@ -94,7 +116,18 @@ export function NavBar() {
                       <MenuIcon className="h-full w-full" />
                     </div>
                     <span>{menu.name}</span>
+                    {menu.subMenus?.length ? (
+                      <div className="ml-2 mt-1 h-5 w-5">
+                        <MenuChevron className="h-full w-full" />
+                      </div>
+                    ) : (
+                      ''
+                    )}
                   </Link>
+
+                  {/* SUB MENU ITEMS */}
+                  {menu.subMenus?.length &&
+                    renderSubMenu(menu.subMenus, routePath)}
                 </li>
               ))}
             </ul>
@@ -109,3 +142,28 @@ export function NavBar() {
     </nav>
   );
 }
+
+/* 
+
+const renderSubMenu = (subMenus: SubMenu[], parentRoutePath: string) => (
+  <ul className="sub-menu">
+    {subMenus.map((subMenu, index) => (
+      <li
+        key={index}
+        className={`sub-menu--item ${
+          subMenu.subMenus?.length ? 'menu-item menu-item-has-children' : ''
+        }`}
+      >
+        <Link
+          href={subMenu.href}
+          className={`sub-menu--link ${
+            parentRoutePath === subMenu.href ? 'active' : ''
+          }`}
+        >
+          {subMenu.name}
+        </Link>
+        {subMenu.subMenus && renderSubMenu(subMenu.subMenus, parentRoutePath)}
+      </li>
+    ))}
+  </ul>
+);*/
