@@ -18,8 +18,8 @@ import styles from './nav.module.scss';
 
 import { MenuIcon } from '@/components/ui/icons';
 
-import navIcon from '~/images/icons/nav-icon.svg';
-import navChevron from '~/images/icons/nav-chevron.svg';
+// import navIcon from '~/images/icons/nav-icon.svg';
+// import navChevron from '~/images/icons/nav-chevron.svg';
 
 export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
