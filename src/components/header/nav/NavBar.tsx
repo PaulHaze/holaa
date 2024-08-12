@@ -18,9 +18,6 @@ import styles from './nav.module.scss';
 
 import { MenuIcon } from '@/components/ui/icons';
 
-// import navIcon from '~/images/icons/nav-icon.svg';
-// import navChevron from '~/images/icons/nav-chevron.svg';
-
 export function NavBar() {
   const { isScrollingUp } = useScrollDirection();
   const { toggleMobileMenu } = useUiContext();
@@ -93,7 +90,7 @@ export function NavBar() {
                     href={menu.href}
                     className={`menu-link flex ${checkActiveMenu(menu)}`}
                   >
-                    <div className="mr-0.5 mt-0.5 h-5 w-5">
+                    <div className="mr-1 mt-0.5 h-5 w-5">
                       <MenuIcon className="h-full w-full" />
                     </div>
                     <span>{menu.name}</span>
