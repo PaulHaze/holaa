@@ -1,8 +1,5 @@
 .navbar {
-  @apply fixed top-0 z-[99] flex h-[64px] w-full items-center bg-base-100/80 px-4 py-10 backdrop-blur-sm transition-transform lg:px-0;
-  > .content {
-    @apply mx-auto flex h-full w-full max-w-lg items-center justify-between;
-  }
+  @apply fixed top-0 z-[99] flex w-full items-center bg-base-100/80 px-4 backdrop-blur-sm transition-transform lg:px-0;
 }
 
 .showNav {

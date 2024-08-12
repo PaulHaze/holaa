@@ -95,7 +95,6 @@ export function NavBar() {
         <Link href="/" className="main-logo flex-shrink-0">
           <Image src={data.logo} alt="logo" />
         </Link>
-
         {/* LINKS */}
         <div className="hidden lg:inline-block">
           {data.menus?.length && (
