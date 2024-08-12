@@ -141,28 +141,3 @@ export function NavBar() {
     </nav>
   );
 }
-
-/* 
-
-const renderSubMenu = (subMenus: SubMenu[], parentRoutePath: string) => (
-  <ul className="sub-menu">
-    {subMenus.map((subMenu, index) => (
-      <li
-        key={index}
-        className={`sub-menu--item ${
-          subMenu.subMenus?.length ? 'menu-item menu-item-has-children' : ''
-        }`}
-      >
-        <Link
-          href={subMenu.href}
-          className={`sub-menu--link ${
-            parentRoutePath === subMenu.href ? 'active' : ''
-          }`}
-        >
-          {subMenu.name}
-        </Link>
-        {subMenu.subMenus && renderSubMenu(subMenu.subMenus, parentRoutePath)}
-      </li>
-    ))}
-  </ul>
-);*/
