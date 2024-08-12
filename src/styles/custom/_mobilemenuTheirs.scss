@@ -2,17 +2,7 @@
     15. Mobile Menu Styles  
 ------------------------------*/
 
-$xxxl_device: 'only screen and (min-width: 2399px)';
-$xxl_device: 'only screen and (min-width: 1699px)';
-$xl_device: 'only screen and (max-width: 1599px)';
-$laptop_device: 'only screen and (min-width: 1199px) and (max-width: 1599px)';
-$laptop_device_two: 'only screen and (min-width: 1300px) and (max-width: 1599px)';
-$lg_device: 'only screen and (max-width: 1199px)';
-$lg_device_two: 'only screen and (min-width: 992px) and (max-width: 1199px)';
-$md_device: 'only screen and (max-width: 991px)';
-$sm_device: 'only screen and (max-width: 767px)';
-$lg_mobile: 'only screen and (max-width: 575px)';
-$sm_mobile: 'only screen and (max-width: 360px)';
+@import 'variables';
 
 .popup_mobile_menu {
   z-index: 9999;
