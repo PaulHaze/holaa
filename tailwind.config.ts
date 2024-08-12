@@ -22,6 +22,8 @@ export default {
       xl: '1280px',
       '2xl': '1536px',
       mxs: { max: '431px' },
+      smmobile: { max: '479px' },
+      lgmobile: { max: '575px' },
       msm: { max: '640px' },
       mmd: { max: '768px' },
       mlg: { max: '1024px' },

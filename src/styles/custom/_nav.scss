@@ -3,6 +3,7 @@
   .navbar-shape {
     @apply absolute left-0 top-0;
   }
+
   .nav-container {
     /* POSITIONAL */
     @apply z-999 fixed left-1/2 top-0 flex w-full max-w-xl -translate-x-1/2 transform;
@@ -10,5 +11,29 @@
     @apply bg-gradient-header rounded-b-[36px] px-4 py-5 backdrop-blur-sm;
     /* ANIMATION */
     @apply duration-400 transition-all ease-in-out;
+    @screen lgmobile {
+      @apply px-4 py-3;
+    }
+
+    &.navbar-bg {
+      @apply relative pl-10;
+      &:after {
+        content: '';
+        @apply absolute left-[15px] top-0 -z-10 h-full w-[95%] bg-white;
+      }
+    }
+
+    .logo {
+      line-height: 0.9;
+      a {
+        @apply text-2xl font-bold text-white;
+        img {
+          @apply h-auto max-w-40;
+        }
+      }
+    }
+
+    .btn-transparent {
+    }
   }
 }
