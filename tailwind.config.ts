@@ -40,7 +40,10 @@ export default {
       center: true,
     },
     extend: {
-      colors: {},
+      colors: {
+        'menu-active': '#ff6f3f',
+        paragraph: '#a9a9a9',
+      },
       fontSize: {
         banner: '9rem',
       },
