@@ -19,6 +19,7 @@ import styles from './nav.module.scss';
 import { MenuIcon, MenuChevron } from '@/components/ui/icons';
 
 export function NavBar() {
+  //#region HOOKS & FUNCS
   const { isScrollingUp } = useScrollDirection();
   const { toggleMobileMenu } = useUiContext();
 
@@ -81,13 +82,13 @@ export function NavBar() {
       ))}
     </ul>
   );
+  //#endregion
 
   return (
     <nav
       className={cn(
-        'nav-container start-50 translate-middle-x inline-block',
-        styles.navbar,
-        isScrollingUp ? styles.showNav : styles.hideNav,
+        'nav-container inline-block',
+        isScrollingUp ? 'show-nav' : 'hide-nav',
       )}
     >
       <div className="mx-auto flex w-full max-w-lg items-center justify-between gap-x-7">
