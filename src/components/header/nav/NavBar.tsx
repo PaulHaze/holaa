@@ -115,7 +115,7 @@ export function NavBar() {
                       </div>
                       <span>{menu.name}</span>
                       {menu.subMenus?.length ? (
-                        <div className="ml-2 mt-1 h-5 w-5">
+                        <div className="ml-2 h-5 w-5">
                           <MenuChevron className="h-full w-full" />
                         </div>
                       ) : (

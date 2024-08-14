@@ -80,6 +80,7 @@ export default {
       zIndex: {
         '99': '99',
         '999': '999',
+        '9999': '9999',
       },
       transitionDuration: {
         '400': '400ms',

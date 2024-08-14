@@ -99,24 +99,14 @@
   }
 }
 
-.sub-menu--item.menu-item-has-children {
-  content: '';
-  position: absolute;
-  background: url('/assets/images/icons/downarrow.webp');
-  right: 10px;
-  top: 16px;
-  display: inline-block;
-  z-index: 9999;
-  filter: brightness(0.5);
-  height: 13px;
-  width: 12px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  transform: rotate(-90deg);
-}
-
-.sub-menu:has(.menu-item-has-children) {
-  a {
+.sub-menu--item.menu-item-has-children > a {
+  &:first-child::after {
+    content: '';
+    background: url('/images/icons/downarrow.webp');
+    @apply z-9999 absolute right-3 top-[22px];
+    @apply h-[14px] w-[14px] -rotate-90 bg-contain bg-no-repeat;
+    /* background-size: 100%; */
+    filter: brightness(0.5);
   }
 }
 
@@ -131,6 +121,7 @@
     @apply flex items-center gap-5;
   }
 }
+
 /*#endregion*/
 
 /*#region PRIMARY NAV */
