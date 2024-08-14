@@ -47,6 +47,9 @@ export default {
       fontSize: {
         banner: '9rem',
       },
+      width: {
+        '15': '3.75rem',
+      },
       minWidth: {
         xs: '431px',
         sm: '640px',
@@ -71,12 +74,21 @@ export default {
         '2xl': '16rem',
         '4xl': '32rem',
       },
+      borderRadius: {
+        half: '50%',
+      },
       zIndex: {
         '99': '99',
         '999': '999',
       },
       transitionDuration: {
         '400': '400ms',
+      },
+      boxShadow: {
+        'nav-inner':
+          '2px 4px 5px 0px rgba(31, 31, 31, 0.05) inset, -4px -5px 5px 0px rgba(31, 31, 31, 0.05) inset, inset 0 0 0 1.2px rgba(240, 240, 240, 0.1)',
+        profile: 'inset 0 0 0 1.2px #f0f0f066',
+        menu: 'inset 0 0 0 1.2px #ffffff66',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -89,6 +101,10 @@ export default {
           'linear-gradient(to right, #5A0dFF -5%, #FF29B8 31.0%, #FF581C)',
         'gradient-other':
           'linear-gradient(92deg, #5A0dFF 0%, #FF29B8 38.6%, #FF581C 97.73%)',
+        'gradient-primary':
+          'linear-gradient(180deg,rgba(255, 255, 255, 0.49) -0.89%,rgba(255, 255, 255, 0.1) 0.12%,rgba(255, 255, 255, 0.11) 99.89%);',
+        'gradient-sidenav':
+          'linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%) border-box',
       },
     },
   },

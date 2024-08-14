@@ -14,7 +14,6 @@ import { menuOneData as data } from '@/data/menu';
 import { ThemeToggle } from './ThemeToggle';
 
 import { cn } from '@/utils/clsxm';
-import styles from './nav.module.scss';
 
 import { MenuIcon, MenuChevron } from '@/components/ui/icons';
 

@@ -1,3 +1,4 @@
+/*#region DEFAULT NAV */
 .navbar-area {
   @apply relative z-99;
 }
@@ -52,6 +53,7 @@
 .main-menu {
   @apply block w-full text-left font-semibold;
 }
+
 .menu-item {
   @apply relative inline-block font-semibold uppercase leading-[1];
   .menu-link {
@@ -97,6 +99,27 @@
   }
 }
 
+.sub-menu--item.menu-item-has-children {
+  content: '';
+  position: absolute;
+  background: url('/assets/images/icons/downarrow.webp');
+  right: 10px;
+  top: 16px;
+  display: inline-block;
+  z-index: 9999;
+  filter: brightness(0.5);
+  height: 13px;
+  width: 12px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg);
+}
+
+.sub-menu:has(.menu-item-has-children) {
+  a {
+  }
+}
+
 .nav-right-part {
   .nav-search-btn {
     @apply leading-[56px];
@@ -108,3 +131,86 @@
     @apply flex items-center gap-5;
   }
 }
+/*#endregion*/
+
+/*#region PRIMARY NAV */
+.primary-nav {
+  @apply mr-16 px-4;
+  &::before {
+    content: '';
+    @apply absolute -right-4 left-auto top-[50%] inline-block translate-y-[-50%];
+    @apply h-full w-[99px] rounded-[100px] bg-gradient-primary blur-md;
+
+    &--item {
+      &:not(:last-child) {
+        @apply mb-5;
+        @screen 2xlm {
+          @apply mb-2;
+        }
+      }
+    }
+
+    &--link {
+      @apply inline-flex w-16 items-center justify-end gap-6 overflow-hidden bg-white/10 p-5 shadow-nav-inner blur-md;
+
+      .link-text {
+        @apply shrink-0 font-narrow text-[18px];
+      }
+      svg {
+        @apply h-6 w-6 shrink-0;
+      }
+
+      img {
+        @apply h-4 w-4;
+      }
+
+      &::before {
+        content: '';
+        @apply absolute left-0 top-0;
+        @apply h-full w-full bg-[#ff581c] bg-gradient-sidenav opacity-0;
+        @apply transition-opacity duration-300 ease-in-out;
+        border: 1.5px solid transparent;
+        border-radius: 100px;
+        mask-composite: exclude;
+      }
+
+      &:hover {
+        @apply w-full;
+        &::before {
+          @apply opacity-100;
+        }
+      }
+    }
+  }
+}
+/*#endregion*/
+
+/*#region SECONDARY NAV */
+.secondary-nav {
+  @apply py-5;
+  &--left,
+  &--right {
+    @apply flex items-center;
+  }
+  &--right {
+    @apply justify-end gap-5;
+
+    .hl-btn {
+      @apply font-narrow;
+    }
+    .profile-btn {
+      @apply rounded-half shadow-profile h-14 w-15;
+      @screen lgmobile {
+        @apply h-10 w-10;
+      }
+    }
+  }
+
+  .menu-btn {
+    @apply rounded-half shadow-menu h-12 w-12 flex-center;
+    svg {
+      @apply overflow-hidden;
+    }
+  }
+}
+/*#endregion*/
