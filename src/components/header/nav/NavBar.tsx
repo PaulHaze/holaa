@@ -88,7 +88,7 @@ export function NavBar() {
     <nav
       className={cn('nav-container', isScrollingUp ? 'show-nav' : 'hide-nav')}
     >
-      <div className="mx-auto flex w-full max-w-lg items-center justify-between gap-x-7">
+      <div className="mx-auto flex w-full max-w-lg items-center justify-between">
         {/* LOGO */}
         <Link href="/" className="main-logo flex-shrink-0">
           <Image src={data.logo} alt="logo" />
@@ -96,37 +96,40 @@ export function NavBar() {
         {/* LINKS */}
         <div className="hidden lg:inline-block">
           {data.menus?.length && (
-            <ul className="main-menu flex gap-x-7">
-              {data.menus.map((menu: Menu, index) => (
-                <li
-                  key={index}
-                  className={`menu-item ${
-                    menu.subMenus?.length && 'menu-item-has-children'
-                  }`}
-                >
-                  {/* TOP MENU ITEM */}
-                  <Link
-                    href={menu.href}
-                    className={`menu-link flex ${checkActiveMenu(menu)}`}
-                  >
-                    <div className="mr-1 mt-0.5 h-5 w-5">
-                      <MenuIcon className="h-full w-full" />
-                    </div>
-                    <span>{menu.name}</span>
-                    {menu.subMenus?.length ? (
-                      <div className="ml-2 mt-1 h-5 w-5">
-                        <MenuChevron className="h-full w-full" />
-                      </div>
-                    ) : (
-                      ''
+            <ul className="main-menu">
+              <div className="space-x-7">
+                {data.menus.map((menu: Menu, index) => (
+                  <li
+                    key={index}
+                    className={cn(
+                      'menu-item',
+                      menu.subMenus?.length && 'menu-item-has-children',
                     )}
-                  </Link>
+                  >
+                    {/* TOP MENU ITEM */}
+                    <Link
+                      href={menu.href}
+                      className={`menu-link ${checkActiveMenu(menu)}`}
+                    >
+                      <div className="mr-1 mt-0.5 h-5 w-5">
+                        <MenuIcon className="h-full w-full" />
+                      </div>
+                      <span>{menu.name}</span>
+                      {menu.subMenus?.length ? (
+                        <div className="ml-2 mt-1 h-5 w-5">
+                          <MenuChevron className="h-full w-full" />
+                        </div>
+                      ) : (
+                        ''
+                      )}
+                    </Link>
 
-                  {/* SUB MENU ITEMS */}
-                  {menu.subMenus?.length &&
-                    renderSubMenu(menu.subMenus, routePath)}
-                </li>
-              ))}
+                    {/* SUB MENU ITEMS */}
+                    {menu.subMenus?.length &&
+                      renderSubMenu(menu.subMenus, routePath)}
+                  </li>
+                ))}
+              </div>
             </ul>
           )}
         </div>
