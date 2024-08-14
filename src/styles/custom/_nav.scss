@@ -2,13 +2,23 @@
   @apply relative z-99;
 }
 
+.show-nav {
+  @apply duration-700 ease-in-out;
+  transform: translate(-50%, 0);
+}
+
+.hide-nav {
+  @apply duration-700 ease-in-out;
+  transform: translate(-50%, -105%);
+}
+
 .navbar-shape {
   @apply absolute left-0 top-0;
 }
 
 .nav-container {
   /* POSITIONAL */
-  @apply fixed left-[50%] top-0 z-999 flex w-full max-w-xl;
+  @apply fixed left-[50%] top-0 z-999 inline-block w-full max-w-xl;
   /* APPEARANCE */
   @apply rounded-b-[36px] bg-gradient-header px-4 py-5 backdrop-blur-sm;
   /* ANIMATION */
@@ -37,70 +47,65 @@
   .btn-transparent {
     @apply text-sm font-bold;
   }
+}
 
-  .main-menu {
-    @apply block w-full text-left font-semibold;
-    .menu-item {
-      @apply relative inline-block font-semibold uppercase leading-[1];
-      .menu-link {
-        @apply flex items-center gap-3 py-5 font-body text-white;
-        &:hover,
-        &.active {
-          @apply text-menu-active;
-        }
-      }
-
-      &:not(:first-child) {
-        @apply ml-7;
-      }
-      &.menu-item-has-children {
-        @apply relative z-0;
-        .sub-menu {
-          /* POSITIONAL */
-          @apply absolute left-0 z-99;
-          /* APPEARANCE */
-          @apply m-0 min-w-[230px] rounded-2xl border border-gray-600/20 bg-gradient-bg p-0;
-          /* ANIMATION */
-          transform: scaleY(0);
-          transform-origin: top;
-          transition: transform 300ms ease;
-          &--item {
-            @apply ml-0 block border-b border-gray-600/20 text-base transition-all duration-400 ease-in-out last:border-b-0;
-          }
-          &--link {
-            @apply text-paragraph block whitespace-nowrap px-5 py-5 text-sm font-medium transition-all duration-400 ease-in;
-            &:hover,
-            &.active {
-              @apply text-menu-active;
-            }
-          }
-        }
-
-        &:hover > .sub-menu {
-          transform: scaleY(1);
-        }
-      }
+.main-menu {
+  @apply block w-full text-left font-semibold;
+}
+.menu-item {
+  @apply relative inline-block font-semibold uppercase leading-[1];
+  .menu-link {
+    @apply flex items-center gap-3 py-5 font-body text-white;
+    &:hover,
+    &.active {
+      @apply text-menu-active;
     }
   }
-  .nav-right-part {
-    .nav-search-btn {
-      @apply leading-[56px];
-    }
-    .nav-hamburger-btn {
-      @apply border-l border-[#ededed] leading-[56px];
-    }
-    &.nav-right-part-desktop {
-      @apply flex items-center gap-5;
-    }
+  &:not(:first-child) {
+    @apply ml-7;
   }
 }
 
-.show-nav {
-  @apply duration-700 ease-in-out;
-  transform: translate(-50%, 0);
+.menu-item-has-children {
+  @apply relative z-0;
+  .sub-menu {
+    /* POSITIONAL */
+    @apply absolute left-0 z-99;
+    /* APPEARANCE */
+    @apply m-0 min-w-[230px] rounded-2xl border border-gray-600/20 bg-gradient-bg p-0;
+    /* ANIMATION */
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 300ms ease;
+    &--item {
+      @apply ml-0 block border-b border-gray-600/20 text-base transition-all duration-400 ease-in-out last:border-b-0;
+    }
+    &--link {
+      @apply block whitespace-nowrap px-5 py-5 text-sm font-medium text-paragraph transition-all duration-400 ease-in;
+      &:hover,
+      &.active {
+        @apply text-menu-active;
+      }
+    }
+    .sub-menu {
+      left: 228px;
+      top: -1px;
+    }
+  }
+
+  &:hover > .sub-menu {
+    transform: scaleY(1);
+  }
 }
 
-.hide-nav {
-  @apply duration-700 ease-in-out;
-  transform: translate(-50%, -105%);
+.nav-right-part {
+  .nav-search-btn {
+    @apply leading-[56px];
+  }
+  .nav-hamburger-btn {
+    @apply border-l border-[#ededed] leading-[56px];
+  }
+  &.nav-right-part-desktop {
+    @apply flex items-center gap-5;
+  }
 }

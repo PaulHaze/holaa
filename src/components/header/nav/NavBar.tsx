@@ -86,10 +86,7 @@ export function NavBar() {
 
   return (
     <nav
-      className={cn(
-        'nav-container inline-block',
-        isScrollingUp ? 'show-nav' : 'hide-nav',
-      )}
+      className={cn('nav-container', isScrollingUp ? 'show-nav' : 'hide-nav')}
     >
       <div className="mx-auto flex w-full max-w-lg items-center justify-between gap-x-7">
         {/* LOGO */}
