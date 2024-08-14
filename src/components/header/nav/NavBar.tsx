@@ -11,7 +11,7 @@ import { useUiContext } from '@/context/UiContext';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
 import { menuOneData as data } from '@/data/menu';
 
-import { ThemeToggle } from './ThemeToggle';
+// import { ThemeToggle } from './ThemeToggle';
 
 import { cn } from '@/utils/clsxm';
 

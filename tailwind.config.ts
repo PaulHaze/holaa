@@ -90,6 +90,7 @@ export default {
           '2px 4px 5px 0px rgba(31, 31, 31, 0.05) inset, -4px -5px 5px 0px rgba(31, 31, 31, 0.05) inset, inset 0 0 0 1.2px rgba(240, 240, 240, 0.1)',
         profile: 'inset 0 0 0 1.2px #f0f0f066',
         menu: 'inset 0 0 0 1.2px #ffffff66',
+        search: '0px 1px 30px rgba(17, 17, 17, 0.1)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
