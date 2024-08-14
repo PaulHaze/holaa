@@ -11,7 +11,7 @@
 }
 
 .header_search_box {
-  @apply top-[30%] mt-8;
+  @apply top-[70%] mt-3;
   @apply invisible opacity-0;
   @apply transition-all duration-300;
 
@@ -21,18 +21,9 @@
 }
 
 .header_search_form {
-  @apply shadow-search rounded bg-white/90;
-
-  /* background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0px 1px 30px rgba(17, 17, 17, 0.1); */
+  @apply shadow-search overflow-hidden rounded bg-white;
   input {
-    @apply w-[320px] border-none bg-transparent p-4 pr-3 text-[#999];
-    /* width: 320px;
-    color: #999; */
-    /* padding: 18px 12px 18px 18px;
-    background-color: transparent;
-    border: none; */
+    @apply w-[320px] border-none bg-transparent p-4 pr-4 text-[#999] outline-none;
   }
   button {
     @apply border-0 bg-transparent pr-4 shadow-none;
@@ -41,4 +32,8 @@
     background-color: transparent;
     padding-right: 15px; */
   }
+}
+
+.header_search_box:has(input:focus) {
+  @apply rounded-sm ring-2 ring-menu-active/80 ring-offset-[2px] ring-offset-slate-900;
 }
