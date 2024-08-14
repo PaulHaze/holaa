@@ -110,18 +110,6 @@
   }
 }
 
-.nav-right-part {
-  .nav-search-btn {
-    @apply leading-[56px];
-  }
-  .nav-hamburger-btn {
-    @apply border-l border-[#ededed] leading-[56px];
-  }
-  &.nav-right-part-desktop {
-    @apply flex items-center gap-5;
-  }
-}
-
 /*#endregion*/
 
 /*#region PRIMARY NAV */

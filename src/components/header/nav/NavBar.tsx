@@ -15,7 +15,7 @@ import { ThemeToggle } from './ThemeToggle';
 
 import { cn } from '@/utils/clsxm';
 
-import { MenuIcon, MenuChevron } from '@/components/ui/icons';
+import { MenuIcon, MenuChevron, SearchIcon } from '@/components/ui/icons';
 
 export function NavBar() {
   //#region HOOKS & FUNCS
@@ -134,9 +134,36 @@ export function NavBar() {
         </div>
 
         {/* SEARCH + HAMBURGER */}
-        <div className="ml-10">
-          <ThemeToggle />
+        <div className="nav-right-part inline-flex items-center pl-5">
+          <div className="relative inline-block">
+            {/* SEARCH */}
+            <div className="search ml-auto">
+              <button
+                className={cn(
+                  'header_search_btn border-0 bg-transparent',
+                  showBox && 'close',
+                )}
+                onClick={toggleSearchBox}
+              >
+                <SearchIcon className="fill-white/70" />
+              </button>
+            </div>
+            {/* SEARCH BOX */}
+            <div
+              className={cn(
+                'header_search_box absolute end-0',
+                showBox && 'show_box',
+              )}
+              onClick={stopPropagation}
+            >
+              SEARCH
+            </div>
+          </div>
         </div>
+
+        {/* <div className="ml-10">
+          <ThemeToggle />
+        </div> */}
       </div>
     </nav>
   );
