@@ -84,8 +84,10 @@ export const UiProvider = ({ children }: Props) => {
   };
 
   const toggleMobileMenu = () => {
+    console.log('mobile mene called from context');
     // setIsMobileMenuOpen(!isMobileMenuOpen);
     setIsMobileMenuOpen((current) => !current);
+    console.log(isMobileMenuOpen);
     const popupMobileMenu = document.querySelector('.popup_mobile_menu');
     if (popupMobileMenu) {
       if (!isMobileMenuOpen) {

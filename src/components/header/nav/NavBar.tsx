@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-// import { useUiContext } from '@/context/UiContext';
+import { useUiContext } from '@/context/UiContext';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
 import { menuOneData as data } from '@/data/menu';
 
@@ -16,12 +16,13 @@ import { menuOneData as data } from '@/data/menu';
 import { cn } from '@/utils/clsxm';
 
 import { LuCrown, LuSearch } from 'react-icons/lu';
-import { MenuIcon, MenuChevron, SearchIcon } from '@/components/ui/icons';
+import { HiMenuAlt1 as HamburgerMenu } from 'react-icons/hi';
+import { MenuIcon, MenuChevron } from '@/components/ui/icons';
 
 export function NavBar() {
   //#region HOOKS & FUNCS
   const { isScrollingUp } = useScrollDirection();
-  // const { toggleMobileMenu } = useUiContext();
+  const { toggleMobileMenu } = useUiContext();
 
   const [showBox, setShowBox] = useState(false);
 
@@ -91,7 +92,7 @@ export function NavBar() {
       <div className="mx-auto flex w-full max-w-xl items-center justify-between xl:px-4">
         {/* LOGO */}
         <Link href="/" className="main-logo flex-shrink-0">
-          <Image src={data.logo} alt="logo" />
+          <Image priority src={data.logo} alt="logo" />
         </Link>
         {/* LINKS */}
         <div className="hidden lg:inline-block">
@@ -184,7 +185,14 @@ export function NavBar() {
           </Link>
 
           {/* HAMBURGER */}
-          <div className="lg:hidden">X</div>
+
+          <button
+            id="navgation-button"
+            className="menu-button menu_btn menu ml-10 mr-2 lg:hidden"
+            onClick={toggleMobileMenu}
+          >
+            <HamburgerMenu size={36} />
+          </button>
         </div>
 
         {/* <div className="ml-10">
