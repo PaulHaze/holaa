@@ -66,6 +66,10 @@ export default {
         xl: '1280px',
         '2xl': '1536px',
       },
+      backgroundSize: {
+        half: '50%',
+        full: '100%',
+      },
       spacing: {
         sm: '1rem',
         md: '2rem',
@@ -91,6 +95,8 @@ export default {
         profile: 'inset 0 0 0 1.2px #f0f0f066',
         menu: 'inset 0 0 0 1.2px #ffffff66',
         search: '0px 1px 30px rgba(17, 17, 17, 0.1)',
+        inner:
+          '5px 2px 10px 0px rgba(45, 23, 70, 0.2) inset, -5px -3px 8px 0px rgba(71, 23, 11, 0.2) inset',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -99,6 +105,8 @@ export default {
         'gradient-bg': 'linear-gradient(95deg, #181818 7.27%, #151515 99.21%)',
         'gradient-header':
           'linear-gradient(180deg, rgba(44, 44, 44, 0.8) 0%,rgba(52, 51, 51, 0) 100%)',
+        'gradient-btn':
+          'linear-gradient(to right, #5a0dff -5%, #ff29b8 31%, #ff581c, #ff29b8, #5a0dff)',
         'gradient-color':
           'linear-gradient(to right, #5A0dFF -5%, #FF29B8 31.0%, #FF581C)',
         'gradient-other':
