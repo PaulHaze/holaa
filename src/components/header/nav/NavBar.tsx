@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-import { useUiContext } from '@/context/UiContext';
+// import { useUiContext } from '@/context/UiContext';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
 import { menuOneData as data } from '@/data/menu';
 
@@ -15,12 +15,13 @@ import { menuOneData as data } from '@/data/menu';
 
 import { cn } from '@/utils/clsxm';
 
+import { LuCrown } from 'react-icons/lu';
 import { MenuIcon, MenuChevron, SearchIcon } from '@/components/ui/icons';
 
 export function NavBar() {
   //#region HOOKS & FUNCS
   const { isScrollingUp } = useScrollDirection();
-  const { toggleMobileMenu } = useUiContext();
+  // const { toggleMobileMenu } = useUiContext();
 
   const [showBox, setShowBox] = useState(false);
 
@@ -133,10 +134,9 @@ export function NavBar() {
           )}
         </div>
 
-        {/* SEARCH + HAMBURGER */}
         <div className="nav-right-part inline-flex items-center pl-5">
+          {/* SEARCH */}
           <div className="relative inline-block">
-            {/* SEARCH */}
             <div className="search ml-auto">
               <button
                 className={cn(
@@ -145,10 +145,9 @@ export function NavBar() {
                 )}
                 onClick={toggleSearchBox}
               >
-                <SearchIcon className="fill-white/70" />
+                <SearchIcon className="mt-1 fill-white/70" />
               </button>
             </div>
-            {/* SEARCH BOX */}
             <div
               className={cn(
                 'header_search_box absolute end-0',
@@ -192,6 +191,18 @@ export function NavBar() {
               </form>
             </div>
           </div>
+
+          {/* HEADER BUTTON */}
+          <Link
+            href="pricing"
+            className="hl-btn btn-base ml-5 flex items-center uppercase mmd:hidden"
+          >
+            <LuCrown />
+            <span>{data.btnText}</span>
+          </Link>
+
+          {/* HAMBURGER */}
+          <div className="lg:hidden">X</div>
         </div>
 
         {/* <div className="ml-10">
