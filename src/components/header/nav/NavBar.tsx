@@ -88,7 +88,7 @@ export function NavBar() {
     <nav
       className={cn('nav-container', isScrollingUp ? 'show-nav' : 'hide-nav')}
     >
-      <div className="mx-auto flex w-full max-w-lg items-center justify-between">
+      <div className="mx-auto flex w-full max-w-xl items-center justify-between xl:px-4">
         {/* LOGO */}
         <Link href="/" className="main-logo flex-shrink-0">
           <Image src={data.logo} alt="logo" />
@@ -97,7 +97,7 @@ export function NavBar() {
         <div className="hidden lg:inline-block">
           {data.menus?.length && (
             <ul className="main-menu">
-              <div className="space-x-7">
+              <div className="space-x-9">
                 {data.menus.map((menu: Menu, index) => (
                   <li
                     key={index}
@@ -134,7 +134,7 @@ export function NavBar() {
           )}
         </div>
 
-        <div className="nav-right-part inline-flex items-center pl-5">
+        <div className="nav-right-part inline-flex items-center">
           {/* SEARCH */}
           <div className="relative inline-block">
             <div className="search ml-auto">
@@ -197,7 +197,7 @@ export function NavBar() {
             href="pricing"
             className="hl-btn btn-base ml-5 flex items-center uppercase mmd:hidden"
           >
-            <LuCrown />
+            <LuCrown size={24} />
             <span>{data.btnText}</span>
           </Link>
 

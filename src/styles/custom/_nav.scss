@@ -57,7 +57,7 @@
 .menu-item {
   @apply relative inline-block font-semibold uppercase leading-[1];
   .menu-link {
-    @apply flex items-center gap-3 py-5 font-body text-white;
+    @apply flex items-center gap-1 py-5 font-body text-white;
     &:hover,
     &.active {
       @apply text-menu-active;
@@ -103,7 +103,7 @@
   &:first-child::after {
     content: '';
     background: url('/images/icons/downarrow.webp');
-    @apply z-9999 absolute right-3 top-[22px];
+    @apply absolute right-3 top-[22px] z-9999;
     @apply h-[14px] w-[14px] -rotate-90 bg-contain bg-no-repeat;
     /* background-size: 100%; */
     filter: brightness(0.5);
@@ -178,7 +178,7 @@
       @apply font-narrow;
     }
     .profile-btn {
-      @apply rounded-half shadow-profile h-14 w-15;
+      @apply h-14 w-15 rounded-half shadow-profile;
       @screen lgmobile {
         @apply h-10 w-10;
       }
@@ -186,7 +186,7 @@
   }
 
   .menu-btn {
-    @apply rounded-half shadow-menu h-12 w-12 flex-center;
+    @apply h-12 w-12 rounded-half shadow-menu flex-center;
     svg {
       @apply overflow-hidden;
     }
