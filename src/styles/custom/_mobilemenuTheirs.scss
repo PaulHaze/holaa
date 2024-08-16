@@ -13,8 +13,8 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(1px);
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   transition: opacity 0.5s ease-out;
   .menu {
     padding: 50px 40px 25px 40px;
@@ -186,11 +186,11 @@
   &.show_menu {
     visibility: visible;
     opacity: 1;
-    .menu {
+    /* .menu {
       opacity: 1;
       right: 0;
       overflow-y: auto;
-    }
+    } */
   }
 }
 

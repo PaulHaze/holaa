@@ -61,7 +61,7 @@ export function MobileMenu() {
   //#endregion
 
   return (
-    <div id="sidebar-menu" className="popup_mobile_menu z-9999 bb">
+    <div id="sidebar-menu" className="popup_mobile_menu">
       <div className="c-backdrop" onClick={toggleMobileMenu}>
         <div className="menu">
           <div className="menu__top">
