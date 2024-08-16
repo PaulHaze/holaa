@@ -92,7 +92,7 @@ export const UiProvider = ({ children }: Props) => {
     console.log(popupMobileMenu);
     if (popupMobileMenu) {
       if (!isMobileMenuOpen) {
-        popupMobileMenu.classList.add('show-menu');
+        popupMobileMenu.classList.add('show_menu');
       } else {
         popupMobileMenu.classList.remove('show_menu');
       }

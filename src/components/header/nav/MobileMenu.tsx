@@ -63,8 +63,8 @@ export function MobileMenu() {
   return (
     <div id="sidebar-menu" className="popup_mobile_menu">
       <div className="c-backdrop" onClick={toggleMobileMenu}>
-        <div className="menu">
-          <div className="menu__top">
+        <div className="mobile-menu">
+          <div className="mobile-menu__top">
             <div className="menu_header flex items-center justify-between">
               <div className="logo">
                 <Link className="main-logo" href={data.href}>
