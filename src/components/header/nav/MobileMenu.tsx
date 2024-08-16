@@ -9,7 +9,7 @@ import { useUiContext } from '@/context/UiContext';
 import { cn } from '@/utils/clsxm';
 
 import { menuOneData as data } from '@/data/menu';
-// import { socials } from '@/data/social';
+import { socials } from '@/data/social';
 
 import { LuXCircle } from 'react-icons/lu';
 
@@ -118,7 +118,17 @@ export function MobileMenu() {
           </div>
 
           {/* SOCIALS AREA */}
-          <div className="social_share">SOCIALS</div>
+          <div className="social_share mt-auto">
+            <ul className="social_share__list flex items-center">
+              {socials.map((social, index) => (
+                <li key={index} className="facebook flex-center">
+                  <Link href={social.href} className="social_share__list_link">
+                    {social.icon}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
