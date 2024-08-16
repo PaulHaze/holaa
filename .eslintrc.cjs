@@ -20,6 +20,7 @@ module.exports = {
       },
     ],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/prefer-default-export': 'off', // Named export is easier to refactor automatically
   },
   overrides: [
     // Configuration for TypeScript files
@@ -42,7 +43,6 @@ module.exports = {
         '@next/next/no-img-element': 'off', // We currently not using next/image because it isn't supported with SSG mode
         '@typescript-eslint/comma-dangle': 'off', // Avoid conflict rule between Eslint and Prettier
         '@typescript-eslint/consistent-type-imports': 'error', // Ensure `import type` is used when it's necessary
-        'import/prefer-default-export': 'off', // Named export is easier to refactor automatically
         'import/order': 'off',
         'import/extensions': [
           'warn',
