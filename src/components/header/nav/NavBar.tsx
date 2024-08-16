@@ -42,7 +42,7 @@ export function NavBar() {
   }, []);
 
   const checkActiveMenu = (menu: Menu) => {
-    if (menu.href === '#' && menu.subMenus && menu.subMenus.length > 0) {
+    if (menu.href === '#' && menu.subMenus?.length) {
       return menu.subMenus.find(
         (subMenu: SubMenu) => subMenu.href === routePath,
       )

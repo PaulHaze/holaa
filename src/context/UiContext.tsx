@@ -37,7 +37,7 @@ export const useUiContext = () => {
 export const UiProvider = ({ children }: Props) => {
   const [isFixedTop, setIsFixedTop] = useState(false);
   const [openSubMenuIndex, setOpenSubMenuIndex] = useState<number | null>(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   //#region SCROLLING
