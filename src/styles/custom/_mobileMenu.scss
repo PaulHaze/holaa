@@ -1,1 +1,10 @@
+.popup_mobile_menu {
+  @apply fixed bottom-0 left-0 right-0 top-0 z-9999;
+  @apply hidden h-full w-full bg-black/80 opacity-0 backdrop-blur-[1px];
+  @apply transition-opacity duration-500 ease-out;
 
+  .mobile-menu {
+    @apply absolute right-[150px] z-999;
+    @apply w-[425px] px-10 pb-6 pt-12;
+  }
+}

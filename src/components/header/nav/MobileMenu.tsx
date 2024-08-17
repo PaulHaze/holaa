@@ -61,8 +61,8 @@ export function MobileMenu() {
   //#endregion
 
   return (
-    <div id="sidebar-menu" className="popup_mobile_menu">
-      <div className="c-backdrop" onClick={toggleMobileMenu}>
+    <div id="sidebar-menu" className="popup_mobile_menu z-9999">
+      <div className="c-backdrop">
         <div className="mobile-menu">
           <div className="mobile-menu__top">
             <div className="menu_header flex items-center justify-between">
@@ -121,8 +121,11 @@ export function MobileMenu() {
           <div className="social_share mt-auto">
             <ul className="social_share__list flex items-center">
               {socials.map((social, index) => (
-                <li key={index} className="facebook flex-center">
-                  <Link href={social.href} className="social_share__list_link">
+                <li key={index} className="facebook">
+                  <Link
+                    href={social.href}
+                    className="social_share__list_link flex-center"
+                  >
                     {social.icon}
                   </Link>
                 </li>
