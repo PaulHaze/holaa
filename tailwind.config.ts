@@ -40,6 +40,10 @@ export default {
       center: true,
     },
     extend: {
+      lineHeight: {
+        one: '1',
+        '1': '1',
+      },
       colors: {
         'menu-active': '#ff6f3f',
         paragraph: '#a9a9a9',
@@ -103,6 +107,8 @@ export default {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-bg': 'linear-gradient(95deg, #181818 7.27%, #151515 99.21%)',
+        'gradient-mobile':
+          'linear-gradient(95deg, #181818 7.27%, #151515 99.21%)',
         'gradient-header':
           'linear-gradient(180deg, rgba(44, 44, 44, 0.8) 0%,rgba(52, 51, 51, 0) 100%)',
         'gradient-btn':

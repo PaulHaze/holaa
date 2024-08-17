@@ -5,6 +5,67 @@
 
   .mobile-menu {
     @apply absolute right-[150px] z-999;
-    @apply w-[425px] px-10 pb-6 pt-12;
+    @apply flex h-screen w-[425px] flex-col rounded-l-3xl border-l-2 border-gray-800 bg-gradient-mobile px-10 pb-6 pt-12;
+    @apply transition-all duration-500 ease-out;
+
+    @screen mmd {
+      @apply w-[375px];
+    }
+
+    @screen lgmobile {
+      @apply w-[310px];
+    }
+
+    @screen smmobile {
+      @apply px-8 py-6;
+    }
+
+    &__top {
+      .menu-header {
+        @apply pb-12 pt-3;
+        .close_button {
+          @apply h-8 w-8 rounded-half border border-stone-500;
+          .close {
+            @apply relative;
+            @apply leading-1 w-max border-0 bg-transparent p-0 text-white opacity-100;
+          }
+        }
+      }
+
+      p {
+        &.menu_description {
+          @apply mt-5 text-lg text-white;
+        }
+        @screen lgmobile {
+          @apply hidden;
+        }
+      }
+    }
+
+    &__content {
+      @apply flex flex-col;
+
+      .menu-list {
+        &__item {
+          @apply block;
+        }
+        &__link {
+          @apply relative;
+          @apply m-0 inline font-medium uppercase text-white;
+          @apply duration-400;
+          &.hover,
+          &.active {
+            @apply text-menu-active;
+          }
+          &.active {
+            @apply border-b border-white;
+          }
+
+          @screen mxs {
+            @apply py-5;
+          }
+        }
+      }
+    }
   }
 }
