@@ -66,6 +66,90 @@
           }
         }
       }
+
+      .address {
+        padding: 70px 0;
+        border-top: 1px solid rgba(186, 151, 120, 0.16);
+        border-bottom: 1px solid rgba(186, 151, 120, 0.16);
+        li {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          div:first-child {
+            border: 1px solid #a9a9a9;
+            line-height: 0;
+            padding: 13.5px;
+            color: #fff;
+            border-radius: 8px;
+          }
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+        }
+        li svg {
+          fill: var(--color-white);
+          stroke: var(--heading-color);
+          stroke-width: 2;
+          line-height: 0;
+          width: 20px;
+          height: 20px;
+        }
+        li a {
+          color: var(--color-white);
+        }
+      }
+    }
+    .social_share {
+      padding-top: 22px;
+      border-top: 1px solid #222;
+      @screen mlg {
+        padding-top: 25px;
+      }
+      &__title {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        color: var(--color-white);
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      &__list {
+        & li:not(:last-child) {
+          margin-right: 10px;
+        }
+        &_link {
+          background: var(--Another-Bg, #1d1d1d);
+          height: 50px;
+          width: 50px;
+          line-height: 50px;
+          text-align: center;
+          color: #cfcfcf;
+          transition: 0.4s;
+          border-radius: 50%;
+          svg {
+            width: 18px;
+            fill: #fff;
+          }
+          &:hover {
+            background-image: linear-gradient(
+              to right,
+              #5a0dff -5%,
+              #ff29b8 31%,
+              #ff581c
+            );
+          }
+        }
+      }
+    }
+  }
+  &.show_menu {
+    visibility: visible;
+    opacity: 1;
+    .mobile-menu {
+      opacity: 1;
+      right: 0;
+      overflow-y: auto;
     }
   }
 }
