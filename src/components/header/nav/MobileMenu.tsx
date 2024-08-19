@@ -82,7 +82,7 @@ export function MobileMenu() {
             </div>
           </div>
 
-          <div className="menu__content mobile_menu_nav">
+          <div className="mobile-menu__content mobile_menu_nav">
             <div className="block">
               <div className="menu-main-menu-container">
                 <ul id="menu-main-menu" className="menu_list">

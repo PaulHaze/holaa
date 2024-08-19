@@ -54,6 +54,7 @@ export default {
       width: {
         '15': '3.75rem',
       },
+
       minWidth: {
         xs: '431px',
         sm: '640px',
@@ -75,12 +76,16 @@ export default {
         full: '100%',
       },
       spacing: {
+        '18': '4.5rem',
         sm: '1rem',
         md: '2rem',
         lg: '4rem',
         xl: '8rem',
         '2xl': '16rem',
         '4xl': '32rem',
+      },
+      padding: {
+        '18:': '4.5rem',
       },
       borderRadius: {
         half: '50%',
