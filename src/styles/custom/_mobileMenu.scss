@@ -9,7 +9,7 @@
 
   .mobile-menu {
     @apply absolute right-[-150px] z-9999;
-    @apply flex h-screen w-[85%] flex-col rounded-l-3xl border-l-2 border-gray-800 bg-gradient-mobile px-6 pb-6 pt-12;
+    @apply flex h-screen w-[85%] flex-col rounded-l-3xl border-l-2 border-stone-800 bg-gradient-mobile px-6 pb-6 pt-12;
     @apply transition-all duration-500 ease-out;
 
     @screen xs {
@@ -21,12 +21,11 @@
 
     &__top {
       .menu_header {
-        @apply pb-12 pt-3;
         .close_button {
-          @apply h-11 w-11 rounded-half border;
+          /* @apply h-11 w-11 rounded-half border; */
           .close {
-            @apply relative;
-            @apply w-max border-0 bg-transparent p-1 leading-1 text-white opacity-100;
+            /* @apply relative;
+            @apply w-max border-0 bg-transparent p-1 leading-1 text-white opacity-100; */
           }
         }
       }

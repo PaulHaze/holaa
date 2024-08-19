@@ -37,7 +37,7 @@ export const useUiContext = () => {
 export const UiProvider = ({ children }: Props) => {
   const [isFixedTop, setIsFixedTop] = useState(false);
   const [openSubMenuIndex, setOpenSubMenuIndex] = useState<number | null>(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   //#region SCROLLING
@@ -47,10 +47,8 @@ export const UiProvider = ({ children }: Props) => {
         document.querySelector<HTMLElement>('.header')?.offsetHeight;
       if (navbarHeight) {
         if (window.scrollY > navbarHeight + 150) {
-          console.log('SETTING isFixed');
           setIsFixedTop(true);
         } else {
-          console.log('REMOVING isFixed');
           setIsFixedTop(false);
         }
 
@@ -84,12 +82,9 @@ export const UiProvider = ({ children }: Props) => {
   };
 
   const toggleMobileMenu = () => {
-    console.log('mobile menu called from context');
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    // setIsMobileMenuOpen((current) => !current);
-    console.log(isMobileMenuOpen);
+
     const popupMobileMenu = document.querySelector('.popup_mobile_menu');
-    console.log(popupMobileMenu);
     if (popupMobileMenu) {
       if (!isMobileMenuOpen) {
         popupMobileMenu.classList.add('show_menu');

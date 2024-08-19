@@ -59,77 +59,75 @@ export function MobileMenu() {
   //#endregion
 
   return (
-    <div id="sidebar-menu" className="popup_mobile_menu z-9999">
-      <div className="c-backdrop">
-        <div className="mobile-menu">
-          <div className="mobile-menu__top">
-            <div className="menu_header flex items-center justify-between">
-              <div className="logo">
-                <Link className="main-logo" href={data.href}>
-                  <Image src={data.logo} alt="logo" />
-                </Link>
-              </div>
-              <button
-                className="close_button flex items-center justify-center"
-                onClick={toggleMobileMenu}
-              >
-                <div className="close">
-                  <GrClose size={18} />
-                </div>
-              </button>
+    <div id="sidebar-menu" className="popup_mobile_menu">
+      <div className="mobile-menu">
+        <div className="mobile-menu__top">
+          <div className="menu_header flex items-center justify-between pb-12 pt-3">
+            <div className="logo">
+              <Link className="main-logo" href={data.href}>
+                <Image src={data.logo} alt="logo" />
+              </Link>
             </div>
-          </div>
-
-          <div className="mobile-menu__content mobile_menu_nav">
-            <div className="block">
-              <div className="menu-main-menu-container">
-                <ul id="menu-main-menu" className="menu_list">
-                  {data.menus.map((menu: Menu, index) => (
-                    <li
-                      key={index}
-                      className={cn(
-                        {
-                          'menu-item-has-children': menu.subMenus?.length,
-                          show: openSubMenuIndex === index,
-                        },
-                        'nav-home menu-item py-2',
-                      )}
-                    >
-                      <Link
-                        href={menu.subMenus?.length ? '#' : menu.href}
-                        onClick={(event) =>
-                          menu.subMenus?.length
-                            ? toggleSubMenu(index, event)
-                            : hideMobileMenu(index)
-                        }
-                        className={`${checkActiveMenu(menu)}`}
-                      >
-                        {menu.name}
-                      </Link>
-                      {menu.subMenus?.length &&
-                        renderSubMenus(menu.subMenus, index)}
-                    </li>
-                  ))}
-                </ul>
+            <button
+              className="flex h-11 w-11 items-center justify-center rounded-half border"
+              onClick={toggleMobileMenu}
+            >
+              <div className="w-max p-1 text-white/80">
+                <GrClose size={18} />
               </div>
-            </div>
+            </button>
           </div>
+        </div>
 
-          {/* SOCIALS AREA */}
-          <div className="social_share mt-auto">
-            <ul className="social_share__list flex items-center">
-              {socials.map((social, index) => (
-                <li key={index} className="facebook">
-                  <Link
-                    href={social.href}
-                    className="social_share__list_link flex-center"
+        <div className="mobile-menu__content mobile_menu_nav">
+          <div className="block">
+            <div className="menu-main-menu-container">
+              <ul id="menu-main-menu" className="menu_list">
+                {data.menus.map((menu: Menu, index) => (
+                  <li
+                    key={index}
+                    className={cn(
+                      {
+                        'menu-item-has-children': menu.subMenus?.length,
+                        show: openSubMenuIndex === index,
+                      },
+                      'nav-home menu-item py-2',
+                    )}
                   >
-                    {social.icon}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                    <Link
+                      href={menu.subMenus?.length ? '#' : menu.href}
+                      onClick={(event) =>
+                        menu.subMenus?.length
+                          ? toggleSubMenu(index, event)
+                          : hideMobileMenu(index)
+                      }
+                      className={`${checkActiveMenu(menu)}`}
+                    >
+                      {menu.name}
+                    </Link>
+                    {menu.subMenus?.length &&
+                      renderSubMenus(menu.subMenus, index)}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+        </div>
+
+        {/* SOCIALS AREA */}
+        <div className="social_share mt-auto">
+          <ul className="social_share__list flex items-center">
+            {socials.map((social, index) => (
+              <li key={index} className="facebook">
+                <Link
+                  href={social.href}
+                  className="social_share__list_link flex-center"
+                >
+                  {social.icon}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
