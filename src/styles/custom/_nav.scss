@@ -41,7 +41,7 @@
       .menu-item {
         @apply relative inline-block font-semibold uppercase leading-[1];
         .menu-link {
-          @apply flex items-center gap-1 py-5 font-body text-white;
+          @apply flex items-center gap-1 py-5 text-white;
           &:hover,
           &.active {
             @apply text-menu-active;

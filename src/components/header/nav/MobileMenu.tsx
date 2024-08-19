@@ -44,12 +44,10 @@ export function MobileMenu() {
   const renderSubMenus = (subMenus: SubMenu[], index: number) => (
     <ul className={cn('sub-menu', openSubMenuIndex === index && 'open')}>
       {subMenus.map((subMenu: SubMenu, key) => (
-        <li key={key} className="menu-item py-1">
+        <li key={key} className="menu-item">
           <Link
             href={subMenu.href}
-            className={
-              routePath === subMenu.href ? 'current font-narrow' : 'font-narrow'
-            }
+            className={routePath === subMenu.href ? 'current' : ''}
             onClick={() => hideMobileMenu(index)}
           >
             {subMenu.name}
@@ -102,7 +100,7 @@ export function MobileMenu() {
                         onClick={(event) =>
                           menu.subMenus?.length
                             ? toggleSubMenu(index, event)
-                            : hideMobileMenu(null)
+                            : hideMobileMenu(index)
                         }
                         className={`${checkActiveMenu(menu)}`}
                       >

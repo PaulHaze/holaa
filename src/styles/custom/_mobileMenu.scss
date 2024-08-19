@@ -157,101 +157,57 @@
     li {
       @apply mb-4 list-none;
       a {
-        @apply font-narrow text-5xl;
+        @apply relative;
+        @apply m-0 block font-narrow text-5xl font-semibold uppercase;
+        @apply duration-400;
 
-        font-weight: 600;
-        position: relative;
-        text-transform: uppercase;
-        margin: 0;
-        display: block;
-        transition: 0.4s;
-        z-index: 2;
-        @media #{$lg_mobile} {
-          font-size: 28px;
+        @screen smmobile {
+          @apply text-4xl;
         }
       }
       &:last-child {
-        margin-bottom: 0;
+        @apply mb-0;
       }
       &.show {
         > a {
-          background: var(
-            --Primary-colors,
-            linear-gradient(92deg, #5a0dff 0%, #ff29b8 14.6%, #ff581c 97.73%)
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          @apply bg-sidebar-text bg-clip-text text-transparent;
         }
       }
     }
   }
   .menu-item-has-children {
-    position: relative;
-    overflow: hidden;
+    @apply relative overflow-hidden;
     &:after {
-      content: ' ';
-      position: absolute;
-      right: 0;
-      top: 21px;
-      font-weight: 700;
-      font-size: 20px;
-      height: 20px;
-      width: 20px;
+      content: '';
       background: url('/images/icons/downarrow.webp');
-      background-repeat: no-repeat;
-      background-size: 100%;
-      transition: 0.4s;
-      @media #{$lg_mobile} {
-        top: 14px;
-      }
+      @apply absolute right-0 top-[21px];
+      @apply h-5 w-5 bg-full bg-no-repeat;
+      @apply text-xl font-bold;
+      @apply duration-400;
     }
     .sub-menu {
-      text-align: left;
-      display: none;
-      padding-left: 15px;
+      @apply hidden pl-10 text-left;
       li {
-        border-bottom: 0;
-        margin-bottom: 0;
-        margin-top: 10px;
+        /* @apply bb; */
+        @apply mb-0 mt-2 border-b-0;
         a {
-          display: block;
-          color: #999;
-          font-size: 16px;
-          position: relative;
-          transition: 0.4s;
-          font-weight: 600;
-          padding-left: 0;
-          padding-right: 18px;
-          color: #999;
-          font-family: Dosis;
+          @apply relative;
+          @apply block py-1 pl-0 pr-4 font-body text-lg font-semibold text-stone-400;
+          @apply duration-400;
           &.current {
-            background: var(
-              --Primary-colors,
-              linear-gradient(92deg, #5a0dff 0%, #ff29b8 14.6%, #ff581c 97.73%)
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @apply bg-sidebar-text bg-clip-text text-transparent;
           }
         }
       }
       &.open {
-        display: block;
+        @apply block;
       }
     }
     &.show {
       &:after {
         content: ' ';
-        position: absolute;
-        right: 0;
-        top: 21px;
-        font-weight: 700;
-        font-size: 20px;
-        height: 20px;
-        width: 20px;
         background: url('/images/icons/uparrow.webp');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        transition: 0.4s;
+        @apply absolute right-0 top-[21px] h-5 w-5 bg-full bg-no-repeat text-xl font-bold duration-400;
       }
     }
   }
@@ -259,5 +215,5 @@
 
 //v 1.0.1
 .mobile_menu_nav .menu-item-has-children .menu-item-has-children:after {
-  top: 8px;
+  @apply top-2;
 }

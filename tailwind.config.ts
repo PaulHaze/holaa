@@ -107,7 +107,10 @@ export default {
         inner:
           '5px 2px 10px 0px rgba(45, 23, 70, 0.2) inset, -5px -3px 8px 0px rgba(71, 23, 11, 0.2) inset',
       },
+
       backgroundImage: {
+        'sidebar-text':
+          'linear-gradient(92deg, #5a0dff 0%, #ff29b8 14.6%, #ff581c 97.73%)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
