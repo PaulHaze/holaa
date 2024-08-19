@@ -11,7 +11,8 @@ import { cn } from '@/utils/clsxm';
 import { menuOneData as data } from '@/data/menu';
 import { socials } from '@/data/social';
 
-import { LuXCircle } from 'react-icons/lu';
+// import { LuXCircle } from 'react-icons/lu';
+import { GrClose } from 'react-icons/gr';
 
 export function MobileMenu() {
   //#region Funcs + Hooks
@@ -43,13 +44,12 @@ export function MobileMenu() {
   const renderSubMenus = (subMenus: SubMenu[], index: number) => (
     <ul className={cn('sub-menu', openSubMenuIndex === index && 'open')}>
       {subMenus.map((subMenu: SubMenu, key) => (
-        <li
-          key={key}
-          className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2315"
-        >
+        <li key={key} className="menu-item py-1">
           <Link
             href={subMenu.href}
-            className={routePath === subMenu.href ? 'current' : ''}
+            className={
+              routePath === subMenu.href ? 'current font-narrow' : 'font-narrow'
+            }
             onClick={() => hideMobileMenu(index)}
           >
             {subMenu.name}
@@ -76,7 +76,7 @@ export function MobileMenu() {
                 onClick={toggleMobileMenu}
               >
                 <div className="close">
-                  <LuXCircle size={30} />
+                  <GrClose size={18} />
                 </div>
               </button>
             </div>
@@ -94,7 +94,7 @@ export function MobileMenu() {
                           'menu-item-has-children': menu.subMenus?.length,
                           show: openSubMenuIndex === index,
                         },
-                        'nav-home menu-item',
+                        'nav-home menu-item py-2',
                       )}
                     >
                       <Link

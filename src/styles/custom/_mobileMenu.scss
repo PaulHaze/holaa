@@ -8,30 +8,25 @@
   @apply transition-opacity duration-500 ease-out;
 
   .mobile-menu {
-    @apply absolute right-[-150px] z-999;
-    @apply flex h-screen w-[425px] flex-col rounded-l-3xl border-l-2 border-gray-800 bg-gradient-mobile px-10 pb-6 pt-12;
+    @apply absolute right-[-150px] z-9999;
+    @apply flex h-screen w-[85%] flex-col rounded-l-3xl border-l-2 border-gray-800 bg-gradient-mobile px-6 pb-6 pt-12;
     @apply transition-all duration-500 ease-out;
 
-    @screen mmd {
-      @apply w-[375px];
+    @screen xs {
+      @apply w-[70%];
     }
-
-    @screen lgmobile {
-      @apply w-[310px];
-    }
-
-    @screen smmobile {
-      @apply px-8 py-6;
+    @screen sm {
+      @apply w-[425px];
     }
 
     &__top {
       .menu_header {
         @apply pb-12 pt-3;
         .close_button {
-          @apply h-8 w-8 rounded-half border border-stone-500;
+          @apply h-11 w-11 rounded-half border;
           .close {
             @apply relative;
-            @apply w-max border-0 bg-transparent p-0 leading-1 text-white opacity-100;
+            @apply w-max border-0 bg-transparent p-1 leading-1 text-white opacity-100;
           }
         }
       }
@@ -159,13 +154,11 @@
 //mobile menu
 .mobile_menu_nav {
   ul.menu_list {
-    padding: 0;
     li {
-      list-style: none;
-      margin-bottom: 15px;
+      @apply mb-4 list-none;
       a {
-        font-family: var(--bigShoulder-font);
-        font-size: 35px;
+        @apply font-narrow text-5xl;
+
         font-weight: 600;
         position: relative;
         text-transform: uppercase;
