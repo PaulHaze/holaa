@@ -195,7 +195,7 @@
           @apply block py-1 pl-0 pr-4 font-body text-lg font-semibold text-stone-400;
           @apply duration-400;
           &.current {
-            @apply bg-sidebar-text bg-clip-text text-transparent;
+            @apply bg-sidebar-text bg-clip-text text-xl text-transparent;
           }
         }
       }
