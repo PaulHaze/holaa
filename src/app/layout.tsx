@@ -5,6 +5,10 @@ import { Dosis, Jost, Big_Shoulders_Display } from 'next/font/google';
 
 import { UiProvider } from '@/context/UiContext';
 
+import 'swiper/swiper-bundle.css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'glightbox/dist/css/glightbox.min.css';
 import '@/styles/global.scss';
 
 //#region FONTS
