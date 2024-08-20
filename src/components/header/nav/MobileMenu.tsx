@@ -92,7 +92,8 @@ export function MobileMenu() {
                 key={index}
                 className={cn(
                   'nav-home menu-item mb-4 list-none py-2',
-                  menu.subMenus?.length && 'menu-item-has-children',
+                  menu.subMenus?.length &&
+                    'menu-item-has-children relative overflow-hidden',
                   openSubMenuIndex === index && 'show',
                 )}
               >
@@ -114,10 +115,10 @@ export function MobileMenu() {
         </div>
 
         {/* SOCIALS AREA */}
-        <div className="social_share mt-auto border-t border-neutral-800 pt-6 mlg:pt-4">
+        <div className="mt-auto border-t border-neutral-800 mlg:pt-5">
           <ul className="social_share__list flex items-center justify-between">
             {socials.map((social, index) => (
-              <li key={index} className="facebook">
+              <li key={index} className="">
                 <Link href={social.href} className="social_share__list_link">
                   {social.icon}
                 </Link>
