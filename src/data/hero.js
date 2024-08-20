@@ -1,4 +1,4 @@
-import HeroSlideImageOne from '~/public/images/hero/hero-slide-1.webp';
+import HeroSlideImageOne from '~/images/hero/hero-slide-1.webp';
 import HeroSlideImageTwo from '@/../public/assets/images/hero/hero-slide-2.webp';
 
 import HeroCardSlideImageOne from '@/../public/assets/images/hero/1.webp';
