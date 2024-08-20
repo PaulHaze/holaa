@@ -64,10 +64,9 @@ export function MobileMenu() {
       id="sidebar-menu"
       className={cn('popup_mobile_menu', isMobileMenuOpen && 'show_menu')}
     >
-      +
       <div className="mobile-menu">
         {/* HEADER */}
-        <div className="mobile-menu__top">
+        <div className="mobile-menu__top mb-10">
           <div className="menu_header flex items-center justify-between pb-8 pt-3">
             <div className="logo">
               <Link className="main-logo" href={data.href}>
