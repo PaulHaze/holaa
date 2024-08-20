@@ -21,6 +21,7 @@ export function MobileMenu() {
     setOpenSubMenuIndex,
     toggleSubMenu,
     toggleMobileMenu,
+    isMobileMenuOpen,
   } = useUiContext();
 
   const pathName = usePathname();
@@ -59,10 +60,15 @@ export function MobileMenu() {
   //#endregion
 
   return (
-    <div id="sidebar-menu" className="popup_mobile_menu">
+    <div
+      id="sidebar-menu"
+      className={cn('popup_mobile_menu', isMobileMenuOpen && 'show_menu')}
+    >
+      +
       <div className="mobile-menu">
+        {/* HEADER */}
         <div className="mobile-menu__top">
-          <div className="menu_header flex items-center justify-between pb-12 pt-3">
+          <div className="menu_header flex items-center justify-between pb-8 pt-3">
             <div className="logo">
               <Link className="main-logo" href={data.href}>
                 <Image src={data.logo} alt="logo" />
@@ -79,50 +85,41 @@ export function MobileMenu() {
           </div>
         </div>
 
-        <div className="mobile-menu__content mobile_menu_nav">
-          <div className="block">
-            <div className="menu-main-menu-container">
-              <ul id="menu-main-menu" className="menu_list">
-                {data.menus.map((menu: Menu, index) => (
-                  <li
-                    key={index}
-                    className={cn(
-                      {
-                        'menu-item-has-children': menu.subMenus?.length,
-                        show: openSubMenuIndex === index,
-                      },
-                      'nav-home menu-item py-2',
-                    )}
-                  >
-                    <Link
-                      href={menu.subMenus?.length ? '#' : menu.href}
-                      onClick={(event) =>
-                        menu.subMenus?.length
-                          ? toggleSubMenu(index, event)
-                          : hideMobileMenu(index)
-                      }
-                      className={`${checkActiveMenu(menu)}`}
-                    >
-                      {menu.name}
-                    </Link>
-                    {menu.subMenus?.length &&
-                      renderSubMenus(menu.subMenus, index)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        {/* CONTENT */}
+        <div className="mobile-menu__content mobile_menu_nav flex flex-col">
+          <ul id="menu-main-menu" className="menu_list py-2">
+            {data.menus.map((menu: Menu, index) => (
+              <li
+                key={index}
+                className={cn(
+                  'nav-home menu-item mb-4 list-none py-2',
+                  menu.subMenus?.length && 'menu-item-has-children',
+                  openSubMenuIndex === index && 'show',
+                )}
+              >
+                <Link
+                  href={menu.subMenus?.length ? '#' : menu.href}
+                  onClick={(event) =>
+                    menu.subMenus?.length
+                      ? toggleSubMenu(index, event)
+                      : hideMobileMenu(index)
+                  }
+                  className={cn(checkActiveMenu(menu), 'z-999')}
+                >
+                  {menu.name}
+                </Link>
+                {menu.subMenus?.length && renderSubMenus(menu.subMenus, index)}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* SOCIALS AREA */}
-        <div className="social_share mt-auto">
-          <ul className="social_share__list flex items-center">
+        <div className="social_share mt-auto border-t border-neutral-800 pt-6 mlg:pt-4">
+          <ul className="social_share__list flex items-center justify-between">
             {socials.map((social, index) => (
               <li key={index} className="facebook">
-                <Link
-                  href={social.href}
-                  className="social_share__list_link flex-center"
-                >
+                <Link href={social.href} className="social_share__list_link">
                   {social.icon}
                 </Link>
               </li>

@@ -18,6 +18,7 @@ interface UiContextType {
   toggleMobileMenu: () => void;
   showScrollTop: boolean;
   scrollToTop: () => void;
+  isMobileMenuOpen: boolean;
 }
 
 interface Props {
@@ -83,15 +84,6 @@ export const UiProvider = ({ children }: Props) => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-
-    const popupMobileMenu = document.querySelector('.popup_mobile_menu');
-    if (popupMobileMenu) {
-      if (!isMobileMenuOpen) {
-        popupMobileMenu.classList.add('show_menu');
-      } else {
-        popupMobileMenu.classList.remove('show_menu');
-      }
-    }
   };
   //#endregion
 
@@ -105,6 +97,7 @@ export const UiProvider = ({ children }: Props) => {
         toggleMobileMenu,
         showScrollTop,
         scrollToTop,
+        isMobileMenuOpen,
       }}
     >
       {children}

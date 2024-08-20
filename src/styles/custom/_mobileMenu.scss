@@ -40,7 +40,7 @@
       }
     }
     &__content {
-      @apply flex flex-col;
+      /* @apply flex flex-col; */
 
       .menu_list {
         &__item {
@@ -63,9 +63,9 @@
           }
         }
 
-        @screen smmobile {
+        /* @screen smmobile {
           @apply py-8;
-        }
+        } */
       }
 
       .address {
@@ -79,50 +79,29 @@
           &:not(:last-child) {
             @apply mb-4;
           }
-          /* div:first-child {
-            border: 1px solid #a9a9a9;
-            line-height: 0;
-            padding: 13.5px;
-            color: #fff;
-            border-radius: 8px;
-          }
-          &:not(:last-child) {
-            margin-bottom: 16px;
-          } */
         }
         li svg {
           @apply h-5 w-5 fill-white stroke-white stroke-2 leading-none;
-          /* fill: var(--color-white);
-          stroke: var(--heading-color);
-          stroke-width: 2;
-          line-height: 0;
-          width: 20px;
-          height: 20px; */
         }
         li a {
           @apply text-white;
-          /* color: var(--color-white); */
         }
       }
     }
 
     .social_share {
-      @apply border-t border-neutral-800 pt-6;
-      @screen mlg {
+      /* @apply border-t border-neutral-800 pt-6; */
+      /* @screen mlg {
         @apply pt-4;
-      }
+      } */
 
       &__title {
         @apply mb-5 inline-block text-lg font-medium uppercase tracking-[2px] text-white;
       }
 
       &__list {
-        @apply flex justify-between;
-        & li:not(:last-child) {
-          @apply mr-2;
-        }
         &_link {
-          @apply h-12 w-12 rounded-half bg-stone-900 bg-gradient-header text-center leading-[50px] text-stone-300 transition-all duration-400;
+          @apply h-12 w-12 rounded-half bg-stone-900 bg-gradient-header text-center leading-[50px] text-stone-300 transition-all duration-400 flex-center;
 
           svg {
             @apply w-5 fill-white;
@@ -154,7 +133,6 @@
 .mobile_menu_nav {
   ul.menu_list {
     li {
-      @apply mb-4 list-none;
       a {
         @apply relative;
         @apply m-0 block font-narrow text-5xl font-semibold uppercase;
