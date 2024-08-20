@@ -1,12 +1,12 @@
-import HeroSlideImageOne from '~/images/hero/hero-slide-1.webp';
-import HeroSlideImageTwo from '@/../public/assets/images/hero/hero-slide-2.webp';
+import HeroSlideImageOne from '@/assets/images/hero/hero-slide-1.webp';
+import HeroSlideImageTwo from '@/assets/images/hero/hero-slide-2.webp';
 
-import HeroCardSlideImageOne from '@/../public/assets/images/hero/1.webp';
-import HeroCardSlideImageTwo from '@/../public/assets/images/hero/2.webp';
-import HeroCardSlideImageThree from '@/../public/assets/images/hero/3.webp';
+import HeroCardSlideImageOne from '@/assets/images/hero/1.webp';
+import HeroCardSlideImageTwo from '@/assets/images/hero/2.webp';
+import HeroCardSlideImageThree from '@/assets/images/hero/3.webp';
 
-import HeroTwoSlideBgImage from '@/../public/assets/images/hero/home_two-hero-bg.webp';
-import HeroTwoSlideImageOne from '@/../public/assets/images/hero/ht-banner-img-1.webp';
+import HeroTwoSlideBgImage from '@/assets/images/hero/home_two-hero-bg.webp';
+import HeroTwoSlideImageOne from '@/assets/images/hero/ht-banner-img-1.webp';
 
 const heroOneData = {
   slides: [
@@ -28,7 +28,7 @@ const heroOneData = {
       rating: '4.9',
       duration: '02h 30m',
       quality: '4k',
-      title: 'ENIGM OF SHADOWS',
+      title: 'ENIGMA OF SHADOWS',
       description:
         'Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!',
       btnOneText: 'Watch Now',
@@ -46,69 +46,21 @@ const heroOneData = {
       btnOneText: 'Watch Now',
       btnTwoText: 'Play Trailer',
     },
-    {
-      videoSrc: 'assets/video/video.mp4',
-      image: HeroSlideImageOne,
-      rating: '4.9',
-      duration: '02h 30m',
-      quality: '4k',
-      title: 'ENIGM OF SHADOWS',
-      description:
-        'Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!',
-      btnOneText: 'Watch Now',
-      btnTwoText: 'Play Trailer',
-    },
-    {
-      videoSrc: 'assets/video/video.mp4',
-      image: HeroSlideImageOne,
-      rating: '4.9',
-      duration: '02h 30m',
-      quality: '4k',
-      title: 'ENIGM OF SHADOWS',
-      description:
-        'Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!',
-      btnOneText: 'Watch Now',
-      btnTwoText: 'Play Trailer',
-    },
-    {
-      videoSrc: 'assets/video/video.mp4',
-      image: HeroSlideImageOne,
-      rating: '4.9',
-      duration: '02h 30m',
-      quality: '4k',
-      title: 'ENIGM OF SHADOWS',
-      description:
-        'Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!',
-      btnOneText: 'Watch Now',
-      btnTwoText: 'Play Trailer',
-    },
-    {
-      videoSrc: 'assets/video/video.mp4',
-      image: HeroSlideImageOne,
-      rating: '4.9',
-      duration: '02h 30m',
-      quality: '4k',
-      title: 'ENIGM OF SHADOWS',
-      description:
-        'Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!',
-      btnOneText: 'Watch Now',
-      btnTwoText: 'Play Trailer',
-    },
   ],
   cardSlides: [
     {
       image: HeroCardSlideImageOne,
-      title: 'The Phantom Menace',
+      title: 'Dune II',
       description: 'Action Movies',
     },
     {
       image: HeroCardSlideImageTwo,
-      title: 'The Dark Night',
+      title: 'God Of War',
       description: 'Action Movies',
     },
     {
       image: HeroCardSlideImageThree,
-      title: 'ENIGMA OF SHADOWS',
+      title: 'The Dancing Butterfly',
       description: 'Action Movies',
     },
   ],
