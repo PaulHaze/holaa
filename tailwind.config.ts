@@ -129,6 +129,8 @@ export default {
           'linear-gradient(180deg,rgba(255, 255, 255, 0.49) -0.89%,rgba(255, 255, 255, 0.1) 0.12%,rgba(255, 255, 255, 0.11) 99.89%);',
         'gradient-sidenav':
           'linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%) border-box',
+        pillinfo:
+          'linear-gradient(133deg, rgba(255, 255, 255, 0.27) 12.14%, rgba(255, 255, 255, 0.09) 86.99%)',
       },
     },
   },
