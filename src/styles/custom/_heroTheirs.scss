@@ -1,20 +1,11 @@
-@import 'variables';
-
-.swiper {
-  /* width: 100%;
-  height: 100%; */
-  /* .swiper-slide {
-    height: auto;
-  } */
-  img {
-    /* width: 100%;
-    height: 100%;
-    object-fit: cover; */
-  }
-}
-
 .home-one-slider {
-  @apply min-h-[450px] max-w-[100%] overflow-hidden rounded-b-[50px] transition-transform duration-1000 ease-out xs:min-h-[550px] lg:max-w-[90%];
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  max-width: 90%;
+  transition: transform 1000ms ease-out;
+  @media #{$lg_device} {
+    max-width: 100%;
+  }
 
   .thumb {
     height: 95vh;

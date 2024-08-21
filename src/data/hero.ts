@@ -36,6 +36,18 @@ const heroOneData = {
     },
     {
       videoSrc: 'assets/video/video.mp4',
+      image: HeroSlideImageTwo,
+      rating: '4.9',
+      duration: '02h 30m',
+      quality: '4k',
+      title: 'THE ARK MANS',
+      description:
+        'Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!',
+      btnOneText: 'Watch Now',
+      btnTwoText: 'Play Trailer',
+    },
+    {
+      videoSrc: 'assets/video/video.mp4',
       image: HeroSlideImageOne,
       rating: '4.9',
       duration: '02h 30m',

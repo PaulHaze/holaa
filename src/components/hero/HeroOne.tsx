@@ -35,31 +35,26 @@ export function HeroOne() {
     spaceBetween: '-70',
     centeredSlides: true,
     slideToClickedSlide: true,
-    pagination: {
-      clickable: true,
-    },
     // clickable: true,
-    allowTouchMove: false,
+    allowTouchMove: true,
     loop: true,
-    autoplay: {
-      delay: 10000,
-    },
+    autoplay: false,
     navigation: {
       prevEl: '.prev-slide',
       nextEl: '.next-slide',
     },
 
-    onAutoplayTimeLeft(
-      swiper: typeof Swiper,
-      time: number,
-      progress: number,
-    ): void {
-      const progressCircle =
-        document.querySelector<HTMLElement>('.linear-circle');
-      if (progressCircle) {
-        progressCircle.style.setProperty('--progress', String(1 - progress));
-      }
-    },
+    // onAutoplayTimeLeft(
+    //   swiper: typeof Swiper,
+    //   time: number,
+    //   progress: number,
+    // ): void {
+    //   const progressCircle =
+    //     document.querySelector<HTMLElement>('.linear-circle');
+    //   if (progressCircle) {
+    //     progressCircle.style.setProperty('--progress', String(1 - progress));
+    //   }
+    // },
     modules: [Autoplay, Pagination, Navigation],
   };
 
@@ -81,23 +76,76 @@ export function HeroOne() {
           {data.slides?.map((slide, index) => (
             <SwiperSlide
               key={index}
-              className="home-one-slider position-relative swiper-slide"
+              className="home-one-slider swiper-slide relative h-auto"
             >
-              <video
-                className="video-autoplay"
-                src={slide.videoSrc}
-                preload="auto"
-                muted
-                autoPlay
-                loop
-              ></video>
-              <div className="thumb">
-                <Image src={slide.image} alt="card-img" className="w-100" />
-              </div>
-              <div className="position-absolute top-50 start-50 translate-middle container mt-5">
-                <div className="row justify-content-lg-between justify-content-center">
+              <Image
+                src={slide.image}
+                alt="image"
+                className="absolute top-0 h-full w-full overflow-hidden object-cover"
+              />
+
+              {/* <div className="thumb">
+                <Image src={slide.image} alt="card-img" className="" />
+              </div> */}
+
+              <div className="absolute bottom-10 z-10 w-full bb md:bottom-20">
+                <div className="md: flex flex-col items-center space-y-5 md:items-start md:pl-10">
+                  {' '}
+                  <ul className="movie-info-list align-item-center justify-content-center justify-content-lg-start gap-lg-2 flex gap-1">
+                    <li className="movie-info-list--item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M8.00004 12.4493L3.05574 15.2169L4.16001 9.65938L0 5.81235L5.62676 5.14521L8.00004 0L10.3733 5.14521L16 5.81235L11.8401 9.65938L12.9443 15.2169L8.00004 12.4493Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                      <span>{slide.rating} Reviews</span>
+                    </li>
+                    <li className="movie-info-list--item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.5 15ZM8.25 7.5V3.75H6.75V9H11.25V7.5H8.25Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                      <span>{slide.duration}</span>
+                    </li>
+                    <li className="movie-info-list--item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="15"
+                        viewBox="0 0 16 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.8 0H15.2C15.6418 0 16 0.3731 16 0.833333V14.1667C16 14.6269 15.6418 15 15.2 15H0.8C0.358176 15 0 14.6269 0 14.1667V0.833333C0 0.3731 0.358176 0 0.8 0ZM7.6 8.75V7.5H6.8V5H5.6V7.5H4.4V5H3.2V8.75H5.6V10H6.8V8.75H7.6ZM12.8 10L11 7.5L12.8 5H11.4L10 6.875V5H8.8V10H10V8.125L11.4 10H12.8Z"
+                          fill="#999999"
+                        />
+                      </svg>
+                      <span>{slide.quality} Quality</span>
+                    </li>
+                  </ul>
+                  <div className="">DETAILS</div>
+                  <div className="">Bottom Buttons</div>
+                </div>
+                {/* <div className="row justify-content-lg-between justify-content-center">
                   <div className="col-lg-6 col-md-9 col-sm-12 align-self-center">
                     <div className="content text-lg-start text-center">
+
+                    
                       <ul className="movie-info-list d-flex align-item-center justify-content-center justify-content-lg-start gap-lg-2 gap-1">
                         <li className="movie-info-list--item">
                           <svg
@@ -182,7 +230,7 @@ export function HeroOne() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </SwiperSlide>
           ))}
