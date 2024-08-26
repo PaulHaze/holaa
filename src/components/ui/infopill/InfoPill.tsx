@@ -14,9 +14,11 @@ export function InfoPill({ text, type }: InfoPillProps) {
     quality: <Md4K />,
   };
   return (
-    <div className="bg-pillinfo inline-flex flex-1 rounded-lg px-2.5 py-1.5">
+    <div
+      className={`inline-flex flex-1 rounded-lg bg-pillinfo px-2 py-1.5 flex-center sm:px-2.5 sm:py-2`}
+    >
       <div className="mr-2 pt-[2px] text-base-content">{icon[type]}</div>
-      <p className="font-body text-sm font-semibold">{text}</p>
+      <p className="sm:text-md font-body text-sm font-semibold">{text}</p>
     </div>
   );
 }
