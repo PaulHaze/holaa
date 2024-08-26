@@ -8,6 +8,7 @@ import { SwiperSlide, Swiper } from 'swiper/react';
 import type { SwiperOptions } from 'swiper/types';
 
 import { InfoPill } from '@/components/ui';
+import { IoPlay } from 'react-icons/io5';
 
 import {
   Navigation,
@@ -78,7 +79,7 @@ export function HeroOne() {
           {data.slides?.map((slide, index) => (
             <SwiperSlide
               key={index}
-              className="home-one-slider swiper-slide relative h-auto"
+              className="home-one-slider swiper-slide relative h-auto md:h-[80vh]"
             >
               <Image
                 src={slide.image}
@@ -103,11 +104,11 @@ export function HeroOne() {
                   </div>
 
                   {/* TEXT */}
-                  <div className="flex flex-col items-center gap-1 px-10 pb-2 pt-5">
-                    <h2 className="font-heading font-semibold">
+                  <div className="flex flex-col items-center gap-1 px-10 pb-2 pt-5 md:items-start md:px-0">
+                    <h2 className="font-heading font-semibold md:text-7xl">
                       {slide.title}
                     </h2>
-                    <p className="text-center font-body text-lg opacity-80">
+                    <p className="text-center font-body text-lg opacity-80 md:w-[80%] md:text-left md:text-xl">
                       {slide.description}
                     </p>
                   </div>
@@ -116,25 +117,9 @@ export function HeroOne() {
                   <div className="flex items-center gap-4">
                     <Link
                       href="movie-details"
-                      className="hl-btn big-btn lh-1 btn-base fs-18 fw-bold radius-20 text-uppercase flex-shrink-0"
+                      className="hl-btn btn-base uppercase"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="15"
-                        viewBox="0 0 13 15"
-                        fill="none"
-                      >
-                        <path
-                          d="M1 2.66967C1 1.90998 1 1.53013 1.16686 1.31807C1.31227 1.13326 1.53485 1.01765 1.77687 1.00119C2.05461 0.982329 2.39036 1.18772 3.06203 1.59855L10.9592 6.42893C11.542 6.78532 11.8335 6.96359 11.934 7.19025C12.022 7.38826 12.022 7.61173 11.934 7.80974C11.8335 8.0364 11.542 8.21467 10.9592 8.57106L3.06203 13.4014C2.39036 13.8123 2.05461 14.0177 1.77687 13.9988C1.53485 13.9824 1.31227 13.8667 1.16686 13.6819C1 13.4699 1 13.0901 1 12.3304V2.66967Z"
-                          fill="currentColor"
-                          fillOpacity="0.2"
-                          stroke="white"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                      <IoPlay />
                       <span>{slide.btnOneText}</span>
                     </Link>
                     <VideoTwo
