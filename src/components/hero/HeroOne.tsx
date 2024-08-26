@@ -18,6 +18,8 @@ import {
   Scrollbar,
 } from 'swiper/modules';
 
+import { cn } from '@/utils';
+
 import { heroOneData as data } from '@/data/hero';
 
 const VideoTwo = dynamic(
@@ -87,10 +89,6 @@ export function HeroOne() {
                 className="absolute top-0 h-full w-full overflow-hidden object-cover"
               />
 
-              {/* <div className="thumb">
-                <Image src={slide.image} alt="card-img" className="" />
-              </div> */}
-
               <div className="absolute bottom-10 z-10 w-full md:bottom-20">
                 <div className="flex flex-col items-center space-y-5 md:items-start md:pl-10">
                   {/* INFO PILLS */}
@@ -117,10 +115,12 @@ export function HeroOne() {
                   <div className="flex items-center gap-4">
                     <Link
                       href="movie-details"
-                      className="hl-btn btn-base uppercase"
+                      className={cn('hl-btn btn-base py-5 uppercase')}
                     >
-                      <IoPlay />
-                      <span>{slide.btnOneText}</span>
+                      <IoPlay className="" size={22} />
+                      <span className="font-body font-semibold">
+                        {slide.btnOneText}
+                      </span>
                     </Link>
                     <VideoTwo
                       title={slide.btnTwoText}
