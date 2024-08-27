@@ -14,23 +14,7 @@
 }
 
 .home-one-slider {
-  @apply min-h-[450px] max-w-[100%] overflow-hidden rounded-b-[50px] transition-transform duration-1000 ease-out xs:min-h-[550px] lg:max-w-[90%];
-
-  /* .thumb {
-    height: 95vh;
-    img {
-      height: 100%;
-    }
-    @media #{$lg_device} {
-      height: 80vh;
-      img {
-        height: 100%;
-      }
-    }
-    @media #{$lg_mobile} {
-      height: 68vh;
-    }
-  } */
+  @apply min-h-[450px] max-w-[100%] overflow-hidden rounded-b-[50px] transition-transform duration-1000 ease-out xs:min-h-[550px] xl:max-w-[85%];
 
   &::before {
     content: '';

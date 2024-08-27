@@ -81,7 +81,7 @@ export function HeroOne() {
           {data.slides?.map((slide, index) => (
             <SwiperSlide
               key={index}
-              className="home-one-slider swiper-slide relative h-auto md:h-[80vh]"
+              className="home-one-slider swiper-slide relative h-auto bb"
             >
               <Image
                 src={slide.image}
@@ -89,7 +89,7 @@ export function HeroOne() {
                 className="absolute top-0 h-full w-full overflow-hidden object-cover"
               />
 
-              <div className="absolute bottom-10 z-10 w-full md:bottom-20">
+              <div className="absolute bottom-10 z-10 w-full">
                 <div className="flex flex-col items-center space-y-5 md:items-start md:pl-10">
                   {/* INFO PILLS */}
                   <div className="flex w-[80%] max-w-[450px] flex-grow justify-between gap-2 sm:gap-3">
@@ -106,7 +106,7 @@ export function HeroOne() {
                     <h2 className="font-heading font-semibold md:text-7xl">
                       {slide.title}
                     </h2>
-                    <p className="text-center font-body text-lg opacity-80 md:w-[80%] md:text-left md:text-xl">
+                    <p className="banner-description text-center font-body text-lg opacity-80 md:w-[80%] md:text-left md:text-xl">
                       {slide.description}
                     </p>
                   </div>

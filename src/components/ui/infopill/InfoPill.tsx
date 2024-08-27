@@ -17,7 +17,7 @@ export function InfoPill({ text, type }: InfoPillProps) {
     <div
       className={`inline-flex flex-1 rounded-lg bg-pillinfo px-2 py-1.5 flex-center sm:px-2.5 sm:py-2`}
     >
-      <div className="mr-2 pt-[2px] text-base-content">{icon[type]}</div>
+      <div className="mr-2 text-base-content">{icon[type]}</div>
       <p className="sm:text-md font-body text-sm font-semibold">{text}</p>
     </div>
   );
