@@ -21,7 +21,7 @@ export function VideoTwo({ src, title }: VideoTwoProps) {
   }, []);
   return (
     <Link
-      className="popup_video hl-btn big-btn lh-1 flex-shrink-0 border border-stone-600 uppercase text-stone-400"
+      className="popup_video hl-btn big-btn flex-shrink-0 border border-stone-600 uppercase text-stone-400 transition-all duration-300 hover:border-stone-50 hover:text-stone-50"
       href={src}
     >
       <svg

@@ -63,16 +63,16 @@ export function HeroOne() {
     modules: [Autoplay, Pagination, Navigation],
   };
 
-  // const swiperHeroCardOptions = {
-  //   speed: 500,
-  //   effect: 'cards',
-  //   rotate: 'false',
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'fraction',
-  //   },
-  //   modules: [Pagination, Navigation, EffectCards, Scrollbar],
-  // };
+  const swiperHeroCardOptions = {
+    speed: 500,
+    effect: 'cards',
+    rotate: 'false',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    modules: [Pagination, Navigation, EffectCards, Scrollbar],
+  };
 
   return (
     <>
@@ -81,7 +81,7 @@ export function HeroOne() {
           {data.slides?.map((slide, index) => (
             <SwiperSlide
               key={index}
-              className="home-one-slider swiper-slide relative h-auto bb"
+              className="home-one-slider swiper-slide relative h-auto"
             >
               <Image
                 src={slide.image}
@@ -90,7 +90,7 @@ export function HeroOne() {
               />
 
               <div className="absolute bottom-10 z-10 w-full">
-                <div className="flex flex-col items-center space-y-5 md:items-start md:pl-10">
+                <div className="flex flex-col items-center space-y-2 md:items-start md:pl-10">
                   {/* INFO PILLS */}
                   <div className="flex w-[80%] max-w-[450px] flex-grow justify-between gap-2 sm:gap-3">
                     <InfoPill type="score" text={`${slide.rating} Reviews`} />
