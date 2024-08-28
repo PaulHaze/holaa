@@ -39,7 +39,7 @@
     .main-menu {
       @apply block w-full text-left font-semibold;
       .menu-item {
-        @apply relative inline-block font-semibold uppercase leading-[1];
+        @apply relative inline-block font-body font-semibold uppercase leading-[1];
         .menu-link {
           @apply flex items-center gap-1 py-5 text-white;
           &:hover,
