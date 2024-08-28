@@ -6,10 +6,6 @@ import dynamic from 'next/dynamic';
 
 import { SwiperSlide, Swiper } from 'swiper/react';
 import type { SwiperOptions } from 'swiper/types';
-
-import { InfoPill } from '@/components/ui';
-import { IoPlay } from 'react-icons/io5';
-
 import {
   Navigation,
   Pagination,
@@ -17,6 +13,10 @@ import {
   // EffectCards,
   // Scrollbar,
 } from 'swiper/modules';
+
+import { InfoPill } from '@/components/ui';
+import { IoPlay } from 'react-icons/io5';
+import { HiArrowLongRight, HiArrowLongLeft } from 'react-icons/hi2';
 
 import { cn } from '@/utils';
 
@@ -86,9 +86,10 @@ export function HeroOne() {
               <Image
                 src={slide.image}
                 alt="image"
-                className="absolute top-0 h-full w-full overflow-hidden object-cover"
+                className="absolute top-0 h-full w-full object-cover"
               />
 
+              {/* CONTENT */}
               <div className="absolute bottom-10 z-10 w-full">
                 <div className="flex flex-col items-center space-y-2 md:items-start md:pl-10">
                   {/* INFO PILLS */}
@@ -112,20 +113,34 @@ export function HeroOne() {
                   </div>
 
                   {/* BUTTONS */}
-                  <div className="flex items-center gap-4">
-                    <Link
-                      href="movie-details"
-                      className={cn('hl-btn btn-base py-5 uppercase')}
-                    >
-                      <IoPlay className="" size={22} />
-                      <span className="font-body font-semibold">
-                        {slide.btnOneText}
-                      </span>
-                    </Link>
-                    <VideoTwo
-                      title={slide.btnTwoText}
-                      src="assets/video/video.mp4"
-                    />
+                  <div className="flex items-center gap-4 md:w-full md:justify-between">
+                    <div className="space-x-4 md:space-x-5">
+                      <Link
+                        href="movie-details"
+                        className={cn('hl-btn btn-base py-5 uppercase')}
+                      >
+                        <IoPlay className="" size={22} />
+                        <span className="font-body font-semibold">
+                          {slide.btnOneText}
+                        </span>
+                      </Link>
+                      <VideoTwo
+                        title={slide.btnTwoText}
+                        src="assets/video/video.mp4"
+                      />
+                    </div>
+                    <div className="hidden pr-20 md:inline-block">
+                      <div className="flex gap-5">
+                        <HiArrowLongLeft
+                          size={40}
+                          className="prev-slide cursor-pointer transition-all duration-300 hover:text-orange"
+                        />
+                        <HiArrowLongRight
+                          className="next-slide cursor-pointer transition-all duration-300 hover:text-orange"
+                          size={40}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

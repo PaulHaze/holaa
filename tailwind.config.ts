@@ -46,6 +46,7 @@ export default {
       },
       colors: {
         'menu-active': '#ff6f3f',
+        orange: '#ff6f3f',
         paragraph: '#a9a9a9',
       },
       fontSize: {
