@@ -81,7 +81,7 @@ export function HeroOne() {
           {data.slides?.map((slide, index) => (
             <SwiperSlide
               key={index}
-              className="home-one-slider swiper-slide relative h-auto"
+              className="home-one-slider swiper-slide relative"
             >
               <Image
                 src={slide.image}
@@ -102,11 +102,11 @@ export function HeroOne() {
                   </div>
 
                   {/* TEXT */}
-                  <div className="flex flex-col items-center gap-1 px-10 pb-2 pt-5 md:items-start md:px-0">
+                  <div className="flex flex-col items-center px-10 pb-6 pt-5 md:items-start md:px-0">
                     <h2 className="font-heading font-semibold md:text-7xl">
                       {slide.title}
                     </h2>
-                    <p className="banner-description text-center font-body text-lg opacity-80 md:w-[80%] md:text-left md:text-xl">
+                    <p className="text-center font-body text-lg opacity-80 md:w-[80%] md:text-left md:text-xl">
                       {slide.description}
                     </p>
                   </div>
