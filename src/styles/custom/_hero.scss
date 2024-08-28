@@ -14,7 +14,7 @@
 }
 
 .home-one-slider {
-  @apply min-h-[450px] max-w-[100%] overflow-hidden rounded-b-[50px] transition-transform duration-1000 ease-out xs:min-h-[650px] xl:max-w-[85%];
+  @apply min-h-[450px] max-w-[100%] overflow-hidden rounded-b-[50px] transition-transform duration-1000 ease-out xs:min-h-[650px] md:min-h-[750px] xl:max-w-[85%];
 
   &::before {
     content: '';
