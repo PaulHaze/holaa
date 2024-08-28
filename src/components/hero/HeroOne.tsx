@@ -14,8 +14,8 @@ import {
   Navigation,
   Pagination,
   Autoplay,
-  EffectCards,
-  Scrollbar,
+  // EffectCards,
+  // Scrollbar,
 } from 'swiper/modules';
 
 import { cn } from '@/utils';
@@ -37,7 +37,7 @@ export function HeroOne() {
     speed: 1500,
     slidesPerView: 'auto',
     initialSlide: 1,
-    spaceBetween: '-70',
+    spaceBetween: -70,
     centeredSlides: true,
     slideToClickedSlide: true,
     // clickable: true,
@@ -63,16 +63,16 @@ export function HeroOne() {
     modules: [Autoplay, Pagination, Navigation],
   };
 
-  const swiperHeroCardOptions = {
-    speed: 500,
-    effect: 'cards',
-    rotate: 'false',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-    },
-    modules: [Pagination, Navigation, EffectCards, Scrollbar],
-  };
+  // const swiperHeroCardOptions = {
+  //   speed: 500,
+  //   effect: 'cards',
+  //   rotate: 'false',
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     type: 'fraction',
+  //   },
+  //   modules: [Pagination, Navigation, EffectCards, Scrollbar],
+  // };
 
   return (
     <>
