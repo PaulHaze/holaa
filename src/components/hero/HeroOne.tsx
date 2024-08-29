@@ -10,8 +10,8 @@ import {
   Navigation,
   Pagination,
   Autoplay,
-  // EffectCards,
-  // Scrollbar,
+  EffectCards,
+  Scrollbar,
 } from 'swiper/modules';
 
 import { InfoPill } from '@/components/ui';
