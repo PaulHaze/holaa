@@ -77,21 +77,11 @@
   }
   &.swiper-slide-active {
     @apply z-10;
-    .video-autoplay {
-      visibility: visible;
-      opacity: 1;
-    }
+
     &::after {
-      z-index: 1;
-      visibility: visible;
-      opacity: 1;
-      @media #{$md_device} {
-        display: none;
-      }
-    }
-    .container {
-      @media #{$laptop_device_two} {
-        padding: 0 20px;
+      @apply invisible z-10 opacity-100;
+      @screen lg {
+        @apply visible;
       }
     }
   }
