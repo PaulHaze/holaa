@@ -8,7 +8,7 @@ import { UiProvider } from '@/context/UiContext';
 import 'swiper/css/bundle';
 import 'swiper/css/effect-cards';
 // import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import 'swiper/css/pagination';
 import 'glightbox/dist/css/glightbox.min.css';
 import '@/styles/global.scss';
 
