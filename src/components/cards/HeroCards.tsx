@@ -24,14 +24,7 @@ export const HeroCards = ({ data }: HeroCardsProps) => {
 
   return (
     <div className="card-container">
-      <h5>SWIPER</h5>
-      <Swiper
-        {...swiperHeroCardOptions}
-        // effect={'cards'}
-        // grabCursor={true}
-        // modules={[EffectCards]}
-        // className="mySwiper"
-      >
+      <Swiper {...swiperHeroCardOptions}>
         {data?.map((cardSlide, key) => (
           <SwiperSlide key={key} className="">
             <Image src={cardSlide.image} alt="card-img" />

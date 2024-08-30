@@ -640,8 +640,6 @@
 }
 
 .card-container {
-  @apply bg-base-300 p-10;
-
   .swiper {
     @apply h-[200px] w-[200px] flex-center;
   }

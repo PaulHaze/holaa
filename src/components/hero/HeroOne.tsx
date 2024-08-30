@@ -9,6 +9,7 @@ import type { SwiperOptions } from 'swiper/types';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 import { InfoPill } from '@/components/ui';
+import { HeroCards } from '@/components/cards';
 import { IoPlay } from 'react-icons/io5';
 import { HiArrowLongRight, HiArrowLongLeft } from 'react-icons/hi2';
 
@@ -56,17 +57,6 @@ export function HeroOne() {
     // },
     modules: [Autoplay, Pagination, Navigation],
   };
-
-  // const swiperHeroCardOptions = {
-  //   speed: 500,
-  //   effect: 'cards',
-  //   rotate: 'false',
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'fraction',
-  //   },
-  //   modules: [Pagination, Navigation, EffectCards, Scrollbar],
-  // };
 
   return (
     <>
@@ -125,6 +115,13 @@ export function HeroOne() {
                     </div>
                   </div>
                 </div>
+              </div>
+              {/* SWIPER CARDS */}
+              <div className="invisible absolute top-[50%] z-20 translate-y-[-48%] md:visible md:right-[5%] lg:right-[15%]">
+                <h3 className="font-narrow opacity-90">SIMILAR MOVIES</h3>
+                {data.cardSlides?.length && (
+                  <HeroCards data={data.cardSlides} />
+                )}
               </div>
             </SwiperSlide>
           ))}

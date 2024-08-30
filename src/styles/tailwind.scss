@@ -14,19 +14,19 @@
     @apply font-heading font-normal leading-normal;
   }
   h1 {
-    @apply text-6xl md:text-7xl lg:text-banner;
+    @apply text-6xl md:text-7xl xl:text-banner;
   }
   h2 {
-    @apply text-5xl;
+    @apply text-5xl md:text-6xl xl:text-7xl;
   }
   h3 {
-    @apply text-4xl;
+    @apply text-4xl md:text-5xl xl:text-6xl;
   }
   h4 {
-    @apply text-3xl;
+    @apply text-3xl md:text-4xl xl:text-5xl;
   }
   h5 {
-    @apply text-2xl;
+    @apply text-2xl md:text-3xl xl:text-4xl;
   }
 }
 
