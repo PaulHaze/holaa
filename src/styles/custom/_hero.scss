@@ -635,35 +635,48 @@
 
 /* HERO CARDS */
 
-.card-base {
-  @apply h-[200px] w-[200px] rounded-lg flex-center;
-}
-
 .card-container {
   .swiper {
-    @apply max-w-[200px] flex-center lg:max-w-[260px] xl:max-w-[300px];
+    @apply max-w-[200px] flex-center lg:max-w-[240px] xl:max-w-[260px];
   }
   .swiper-slide {
-    @apply rounded-lg flex-center xl:rounded-xl;
-  }
-  .swiper-pagination {
-    @apply z-50;
+    @apply rounded-lg xl:rounded-xl;
   }
 
+  .swiper-pagination {
+    @apply relative inline-flex;
+  }
   .swiper-pagination .swiper-pagination-current {
-    @apply font-heading;
-    font-size: 60px;
+    @apply relative bottom-3 font-heading text-7xl text-white;
+    /* ADDS THE ZERO */
+    /* &:before {
+      left: -20px;
+      bottom: 126px;
+    } */
   }
-  .swiper-pagination .swiper-pagination-current:before {
-    left: -2px;
-    bottom: 26px;
+
+  .swiper-pagination-fraction {
+    @apply font-narrow text-6xl font-light text-white;
   }
+
+  .swiper-pagination-total {
+    @apply relative -left-1 top-10 font-heading text-4xl text-white/80;
+  }
+
+  /* 
+
+
   .swiper-pagination .swiper-pagination-current:after {
     bottom: -13px;
-    height: 54px;
+    height: 84px;
     background-color: #fff;
+    font-family: var(--heading-font);
   }
+
+
+
   .swiper-pagination .swiper-pagination-total {
+    font-family: var(--heading-font);
     font-weight: 500;
   }
   .swiper-pagination .swiper-pagination-total {
@@ -675,5 +688,5 @@
   .swiper-pagination .swiper-pagination-total:before {
     bottom: 0px;
     background-color: #fff;
-  }
+  } */
 }

@@ -117,7 +117,7 @@ export function HeroOne() {
                 </div>
               </div>
               {/* SWIPER CARDS */}
-              <div className="invisible absolute top-[50%] z-20 translate-y-[-52%] md:visible md:right-[5%] lg:right-[13%]">
+              <div className="invisible absolute top-[50%] z-20 translate-y-[-52%] md:visible md:right-[5%] lg:right-[9%]">
                 <h5 className="text-left font-narrow opacity-90">
                   SIMILAR MOVIES
                 </h5>
