@@ -11,11 +11,10 @@ type HeroCardsProps = {
 };
 
 export const HeroCards = ({ data }: HeroCardsProps) => {
-  console.log(data);
-
   const swiperHeroCardOptions: SwiperProps = {
     speed: 500,
     effect: 'cards',
+    grabCursor: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
@@ -27,36 +26,18 @@ export const HeroCards = ({ data }: HeroCardsProps) => {
     <div className="card-container">
       <h5>SWIPER</h5>
       <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-      </Swiper>
-
-      {/* <Swiper
         {...swiperHeroCardOptions}
-        className="swiper hero-card-slider-wrap"
+        // effect={'cards'}
+        // grabCursor={true}
+        // modules={[EffectCards]}
+        // className="mySwiper"
       >
         {data?.map((cardSlide, key) => (
-          <SwiperSlide
-            key={key}
-            className="hero-movie-card swiper-slide text-center"
-          >
-            <div className="thumb">
-              <Image src={cardSlide.image} alt="card-img" />
-            </div>
-            <div className="content mt-3">
-              <h3 className="card-title">{cardSlide.title}</h3>
-              <p className="card-description">{cardSlide.description}</p>
-            </div>
+          <SwiperSlide key={key} className="">
+            <Image src={cardSlide.image} alt="card-img" />
           </SwiperSlide>
         ))}
-      </Swiper> */}
+      </Swiper>
     </div>
   );
 };
