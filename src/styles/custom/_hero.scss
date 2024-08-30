@@ -641,21 +641,38 @@
 
 .card-container {
   .swiper {
-    @apply h-[200px] w-[200px] flex-center;
+    @apply max-w-[200px] flex-center lg:max-w-[260px] xl:max-w-[300px];
   }
   .swiper-slide {
-    @extend .card-base;
-    &:nth-child(1) {
-      @apply bg-blue-500;
-    }
-    &:nth-child(2) {
-      @apply bg-red-500;
-    }
-    &:nth-child(3) {
-      @apply bg-sky-500;
-    }
-    &:nth-child(4) {
-      @apply bg-violet-500;
-    }
+    @apply rounded-lg flex-center xl:rounded-xl;
+  }
+
+  .swiper-pagination .swiper-pagination-current {
+    font-family: var(--heading-font);
+    font-size: 60px;
+  }
+  .swiper-pagination .swiper-pagination-current:before {
+    left: -2px;
+    bottom: 26px;
+  }
+  .swiper-pagination .swiper-pagination-current:after {
+    bottom: -13px;
+    height: 54px;
+    background-color: #fff;
+    font-family: var(--heading-font);
+  }
+  .swiper-pagination .swiper-pagination-total {
+    font-family: var(--heading-font);
+    font-weight: 500;
+  }
+  .swiper-pagination .swiper-pagination-total {
+    margin-top: 37px;
+    float: inline-end;
+    color: #fff;
+    font-weight: 400;
+  }
+  .swiper-pagination .swiper-pagination-total:before {
+    bottom: 0px;
+    background-color: #fff;
   }
 }

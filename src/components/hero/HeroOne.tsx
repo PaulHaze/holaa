@@ -117,8 +117,10 @@ export function HeroOne() {
                 </div>
               </div>
               {/* SWIPER CARDS */}
-              <div className="invisible absolute top-[50%] z-20 translate-y-[-48%] md:visible md:right-[5%] lg:right-[15%]">
-                <h3 className="font-narrow opacity-90">SIMILAR MOVIES</h3>
+              <div className="invisible absolute top-[50%] z-20 translate-y-[-52%] md:visible md:right-[5%] lg:right-[13%]">
+                <h5 className="text-left font-narrow opacity-90">
+                  SIMILAR MOVIES
+                </h5>
                 {data.cardSlides?.length && (
                   <HeroCards data={data.cardSlides} />
                 )}
