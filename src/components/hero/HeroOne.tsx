@@ -6,13 +6,7 @@ import dynamic from 'next/dynamic';
 
 import { SwiperSlide, Swiper } from 'swiper/react';
 import type { SwiperOptions } from 'swiper/types';
-import {
-  Navigation,
-  Pagination,
-  Autoplay,
-  EffectCards,
-  Scrollbar,
-} from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 import { InfoPill } from '@/components/ui';
 import { IoPlay } from 'react-icons/io5';
@@ -129,18 +123,6 @@ export function HeroOne() {
                         src="assets/video/video.mp4"
                       />
                     </div>
-                    <div className="hidden pr-20 md:inline-block">
-                      <div className="flex gap-5">
-                        <HiArrowLongLeft
-                          size={40}
-                          className="prev-slide cursor-pointer transition-all duration-300 hover:text-orange"
-                        />
-                        <HiArrowLongRight
-                          className="next-slide cursor-pointer transition-all duration-300 hover:text-orange"
-                          size={40}
-                        />
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -148,6 +130,19 @@ export function HeroOne() {
           ))}
         </Swiper>
       )}
+      {/* SLIDER BUTTONS */}
+      <div className="relative z-9999 -mt-20 hidden justify-end pr-10 md:flex xl:pr-40">
+        <div className="flex gap-5">
+          <HiArrowLongLeft
+            size={40}
+            className="prev-slide cursor-pointer transition-all duration-300 hover:text-orange"
+          />
+          <HiArrowLongRight
+            className="next-slide cursor-pointer transition-all duration-300 hover:text-orange"
+            size={40}
+          />
+        </div>
+      </div>
     </>
   );
 }

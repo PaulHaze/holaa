@@ -4,16 +4,15 @@ import Image from 'next/image';
 
 import { SwiperSlide, Swiper } from 'swiper/react';
 import type { SwiperProps } from 'swiper/react';
-
 import { Navigation, Pagination, EffectCards, Scrollbar } from 'swiper/modules';
-
-import styles from './cards.module.scss';
 
 type HeroCardsProps = {
   data?: Array<any>;
 };
 
 export const HeroCards = ({ data }: HeroCardsProps) => {
+  console.log(data);
+
   const swiperHeroCardOptions: SwiperProps = {
     speed: 500,
     effect: 'cards',
