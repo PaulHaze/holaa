@@ -6,6 +6,7 @@ import { Dosis, Jost, Big_Shoulders_Display } from 'next/font/google';
 import { UiProvider } from '@/context/UiContext';
 
 import 'swiper/css/bundle';
+import 'swiper/css/effect-cards';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 import 'glightbox/dist/css/glightbox.min.css';

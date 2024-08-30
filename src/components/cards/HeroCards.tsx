@@ -7,6 +7,8 @@ import type { SwiperProps } from 'swiper/react';
 
 import { Navigation, Pagination, EffectCards, Scrollbar } from 'swiper/modules';
 
+import styles from './cards.module.scss';
+
 type HeroCardsProps = {
   data?: Array<any>;
 };
@@ -23,8 +25,21 @@ export const HeroCards = ({ data }: HeroCardsProps) => {
   };
 
   return (
-    <div className="hero-card-slider">
+    <div className="card-container">
+      <h5>SWIPER</h5>
       <Swiper
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+      </Swiper>
+
+      {/* <Swiper
         {...swiperHeroCardOptions}
         className="swiper hero-card-slider-wrap"
       >
@@ -42,7 +57,7 @@ export const HeroCards = ({ data }: HeroCardsProps) => {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 };

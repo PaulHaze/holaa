@@ -632,3 +632,32 @@
     }
   }
 }
+
+/* HERO CARDS */
+
+.card-base {
+  @apply h-[200px] w-[200px] rounded-lg flex-center;
+}
+
+.card-container {
+  @apply bg-base-300 p-10;
+
+  .swiper {
+    @apply h-[200px] w-[200px] flex-center;
+  }
+  .swiper-slide {
+    @extend .card-base;
+    &:nth-child(1) {
+      @apply bg-blue-500;
+    }
+    &:nth-child(2) {
+      @apply bg-red-500;
+    }
+    &:nth-child(3) {
+      @apply bg-sky-500;
+    }
+    &:nth-child(4) {
+      @apply bg-violet-500;
+    }
+  }
+}
