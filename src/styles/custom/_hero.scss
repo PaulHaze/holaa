@@ -656,7 +656,7 @@
   }
 
   .swiper-pagination-fraction {
-    @apply font-narrow text-6xl font-light text-white;
+    @apply font-narrow text-6xl font-light text-white/30;
   }
 
   .swiper-pagination-total {

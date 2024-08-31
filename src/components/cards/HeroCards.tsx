@@ -30,7 +30,7 @@ export const HeroCards = ({ data }: HeroCardsProps) => {
             <Image src={cardSlide.image} alt="card-img" />
           </SwiperSlide>
         ))}
-        <div className="invisible absolute bottom-0 right-[-85px] lg:visible">
+        <div className="invisible absolute -bottom-3 right-[-75px] lg:visible">
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>
