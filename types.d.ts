@@ -9,3 +9,16 @@ type Menu = {
   href: string;
   subMenus?: SubMenu[];
 };
+
+type MovieCard = {
+  image: StaticImageData;
+  isRibbon: boolean;
+  count: number;
+  videoSrc: string;
+  href: string;
+  title: string;
+  rating: string;
+  duration: string;
+  quality: string;
+  categories: string[];
+};
