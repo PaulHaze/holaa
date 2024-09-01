@@ -1,0 +1,29 @@
+/* HERO CARDS */
+.card-container {
+  .swiper {
+    @apply max-w-[200px] flex-center lg:max-w-[240px] xl:max-w-[260px];
+  }
+  .swiper-slide {
+    @apply rounded-lg xl:rounded-xl;
+  }
+
+  .swiper-pagination {
+    @apply relative inline-flex;
+  }
+  .swiper-pagination .swiper-pagination-current {
+    @apply relative bottom-3 font-heading text-7xl text-white;
+    /* ADDS THE ZERO */
+    /* &:before {
+      left: -20px;
+      bottom: 126px;
+    } */
+  }
+
+  .swiper-pagination-fraction {
+    @apply font-narrow text-6xl font-light text-white/30;
+  }
+
+  .swiper-pagination-total {
+    @apply relative -left-1 top-10 font-heading text-4xl text-white/80;
+  }
+}
