@@ -1,4 +1,4 @@
-import { HeaderOne } from '@/components/header';
+import { HeaderOne } from '@/components/sections/header';
 
 export default function Home() {
   return (

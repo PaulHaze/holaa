@@ -1,7 +1,6 @@
-import { MobileMenu, NavBar } from './nav';
-// import OffScreenMenu from './nav/OffscreenMenu';
+import { MobileMenu, NavBar } from '@/components/nav';
 
-import { HeroOne } from '@/components/hero';
+import { HeroOne } from '@/components/sections/hero';
 
 interface HeaderOneProps {
   isHero: boolean;

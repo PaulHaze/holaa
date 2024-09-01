@@ -109,7 +109,7 @@
     }
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: -1px;
       width: 35px;
@@ -139,7 +139,8 @@
       justify-content: center;
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid #f0f0f0;
-      box-shadow: 2px 4px 5px 0px rgba(31, 31, 31, 0.2) inset,
+      box-shadow:
+        2px 4px 5px 0px rgba(31, 31, 31, 0.2) inset,
         -4px -5px 5px 0px rgba(31, 31, 31, 0.2) inset;
       backdrop-filter: blur(10px);
       width: 40px;
@@ -154,7 +155,8 @@
             rgba(255, 255, 255, 0.03) 50.98%
           ),
           linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%);
-        box-shadow: 5px 2px 10px 0px rgba(45, 23, 70, 0.2) inset,
+        box-shadow:
+          5px 2px 10px 0px rgba(45, 23, 70, 0.2) inset,
           -5px -3px 8px 0px rgba(71, 23, 11, 0.2) inset;
         border: transparent;
       }
@@ -166,7 +168,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 70%;
     left: 50%;
@@ -201,10 +203,10 @@
       backdrop-filter: unset;
       @media #{$laptop_device_two} {
         font-size: 12px;
-      } 
+      }
       @media #{$lg_device} {
         font-size: 12px;
-      } 
+      }
       .movie-name,
       .movie-info {
         margin-bottom: 10px;
@@ -224,7 +226,7 @@
         top: 50%;
       }
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 70%;
         left: 50%;
@@ -386,7 +388,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -628,7 +630,7 @@
     width: 88%;
   }
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -647,10 +649,10 @@
   .content {
     margin-bottom: 40px;
     transition: all 1000ms ease;
-    @media #{$lg_device}{
+    @media #{$lg_device} {
       margin-bottom: 10px;
     }
-    @media #{$lg_mobile}{
+    @media #{$lg_mobile} {
       margin-bottom: 0;
     }
   }
@@ -662,7 +664,7 @@
     height: 110px;
     line-height: 110px;
     margin-top: -120px;
-    @media #{$md_device}{
+    @media #{$md_device} {
       width: 100px;
       height: 100px;
       line-height: 100px;
@@ -676,7 +678,7 @@
     svg {
       width: 25px;
       margin-top: -2px;
-      @media #{$md_device}{
+      @media #{$md_device} {
         width: 18px;
       }
     }
@@ -697,10 +699,10 @@
     font-size: 80px;
     font-weight: 900;
     margin-bottom: 22px;
-    @media #{$lg_device}{
+    @media #{$lg_device} {
       font-size: 40px;
     }
-    @media #{$lg_mobile}{
+    @media #{$lg_mobile} {
       font-size: 30px;
     }
   }
@@ -715,11 +717,11 @@
     font-size: 20px;
     line-height: 34px;
     padding: 0 100px;
-    @media #{$lg_device}{
+    @media #{$lg_device} {
       font-size: 16px;
       padding: 0 70px;
     }
-    @media #{$lg_mobile}{
+    @media #{$lg_mobile} {
       display: none;
     }
   }
@@ -751,27 +753,27 @@
 }
 
 .movie-wrapper-one {
-  @media #{$md_device}{
+  @media #{$md_device} {
     margin-top: 70px;
   }
 }
 .home-two-slider .movie-info-list--item {
-  @media #{$md_device}{
+  @media #{$md_device} {
     font-size: 12px;
   }
 }
 .home-two-slider .content .banner-description {
-  @media #{$md_device}{
+  @media #{$md_device} {
     font-size: 14px !important;
   }
 }
 
 .enjoy-favourite-img {
   margin-bottom: -48px;
-  @media #{$lg_device}{
+  @media #{$lg_device} {
     margin-bottom: -26px;
   }
-  @media #{$sm_mobile}{
+  @media #{$sm_mobile} {
     margin-bottom: -20px;
   }
 }
