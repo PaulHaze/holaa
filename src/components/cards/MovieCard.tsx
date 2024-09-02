@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
 import { IoStar } from 'react-icons/io5';
 import { GoClockFill } from 'react-icons/go';
@@ -8,15 +8,15 @@ import { Md4K, MdPlayArrow } from 'react-icons/md';
 
 import { trendingOneMoviesData as data } from '@/data/movie';
 
-const VideoOne = dynamic(
-  async () => {
-    const mod = await import('@/components/video/VideoOne');
-    return mod.VideoOne;
-  },
-  {
-    ssr: false,
-  },
-);
+// const VideoOne = dynamic(
+//   async () => {
+//     const mod = await import('@/components/video/VideoOne');
+//     return mod.VideoOne;
+//   },
+//   {
+//     ssr: false,
+//   },
+// );
 
 const movie = data[0];
 
@@ -46,11 +46,14 @@ export function MovieCard() {
 
       {/* <!-- Movie Details --> */}
       <div className="details absolute text-center">
-        <h4 className="movie-name uppercase">
-          <Link href={movie.href} className="gradient-link fw-normal">
+        <h3 className="movie-name uppercase">
+          <Link
+            href={movie.href}
+            className="gradient-link fw-normal font-heading hover:bg-gradient-color hover:bg-clip-text hover:text-transparent"
+          >
             {movie.title}
           </Link>
-        </h4>
+        </h3>
         <ul className="movie-info">
           <li className="flex items-center">
             <IoStar className="relative mb-[4px]" />
