@@ -2,57 +2,45 @@
 @import 'utils/mixins';
 
 .movie-card-small {
-  border-radius: 40px;
-  overflow: hidden;
-
-  @media #{$lg-mobile} {
-    max-width: 90%;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-image: linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0.8) 0%,
+      rgba(24, 24, 24, 0.8) 100%
+    );
+    // border-radius: 30px;
+    transition: all 300ms ease;
+    mix-blend-mode: soft-light;
   }
-
   .details {
-    width: 100%;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(50px);
-    border-radius: 40px;
-    padding: 20px;
-    margin-bottom: -100%;
-    transition: margin 500ms;
+    @apply absolute bottom-0 -mb-[100%];
+    @apply w-full rounded-[40px] bg-stone-50/10 p-5 backdrop-blur-lg;
+    @apply text-center;
+    @apply transition-all duration-500;
     .movie-name,
     .movie-info {
-      margin-bottom: 6px;
-      @media #{$lg-mobile} {
-        font-size: 24px;
-      }
+      @apply mb-1;
     }
 
     ul {
-      color: #e2e2e2;
+      @apply text-base-content/90;
       line-height: 1;
       li {
         display: inline-block;
-        @media #{$lg-mobile} {
-          font-size: 14px;
-        }
+        @apply text-lg;
       }
     }
     .movie-info {
       li {
-        display: inline-flex;
-        align-items: center;
-        color: #e2e2e2;
-        gap: 7px;
-        img {
-          filter: brightness(100);
-        }
-        @media #{$lg-mobile} {
-          font-size: 14px;
-        }
+        @apply inline-flex items-center gap-2 text-base-content;
         &:not(:last-child) {
-          margin-right: 12px;
-          @media #{$lg-mobile} {
-            margin-right: 8px;
-          }
+          @apply mr-3;
         }
       }
     }
@@ -77,6 +65,23 @@
           font-size: 24px;
         }
       }
+    }
+  }
+  .movie-link {
+    @apply absolute left-1/2 top-[33%] h-24 w-24 -translate-x-1/2 rounded-full bg-stone-200/20 opacity-0 backdrop-blur-sm transition-all delay-100 duration-700 ease-in-out flex-center;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .details {
+      @apply mb-[0%];
+    }
+    .movie-link {
+      @apply top-[27%] opacity-100;
     }
   }
 
@@ -163,23 +168,6 @@
         margin-bottom: 5px;
       }
     }
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background-image: linear-gradient(
-      180deg,
-      rgba(17, 17, 17, 0.8) 0%,
-      rgba(24, 24, 24, 0.8) 100%
-    );
-    // border-radius: 30px;
-    transition: all 300ms ease;
-    mix-blend-mode: soft-light;
   }
 
   // ============ Style TWO ============= //
@@ -328,20 +316,6 @@
 
   // ============ For Hover ============= //
   &:hover {
-    &::before {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
-    .video-play-btn {
-      visibility: visible;
-      opacity: 1;
-      margin-top: -41px;
-    }
-    .details {
-      margin-bottom: 0;
-    }
     .options {
       top: -10%;
       right: -10%;

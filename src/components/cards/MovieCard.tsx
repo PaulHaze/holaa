@@ -22,7 +22,7 @@ const movie = data[0];
 
 export function MovieCard() {
   return (
-    <div className="movie-card-small group relative mb-20 w-full">
+    <div className="movie-card-small group relative mb-20 w-[75%] overflow-hidden rounded-[40px] sm:w-[420px]">
       <Image
         src={movie.image}
         alt="card-img"
@@ -37,7 +37,7 @@ export function MovieCard() {
       )}
 
       {/* LINK BUTTON EVENTUALLY */}
-      <div className="absolute left-1/2 top-[33%] h-24 w-24 -translate-x-1/2 rounded-full bg-stone-200/20 opacity-0 backdrop-blur-sm transition-all delay-100 duration-700 ease-in-out flex-center group-hover:top-[27%] group-hover:opacity-100">
+      <div className="movie-link">
         <MdPlayArrow size={62} />
       </div>
 
@@ -45,15 +45,12 @@ export function MovieCard() {
       {/* <VideoOne src={movie.videoSrc} /> */}
 
       {/* <!-- Movie Details --> */}
-      <div className="details absolute text-center">
-        <h3 className="movie-name uppercase">
-          <Link
-            href={movie.href}
-            className="gradient-link fw-normal font-heading hover:bg-gradient-color hover:bg-clip-text hover:text-transparent"
-          >
+      <div className="details">
+        <h2 className="movie-name uppercase">
+          <Link href={movie.href} className="gradient-link font-heading">
             {movie.title}
           </Link>
-        </h3>
+        </h2>
         <ul className="movie-info">
           <li className="flex items-center">
             <IoStar className="relative mb-[4px]" />
