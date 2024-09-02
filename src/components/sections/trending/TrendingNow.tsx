@@ -12,7 +12,9 @@ export function TrendingNow() {
         TRENDING NOW
       </h3>
       <div className="mt-5 flex-center">
-        <MovieCard />
+        <div className="w-[420px]">
+          <MovieCard />
+        </div>
       </div>
     </div>
   );
