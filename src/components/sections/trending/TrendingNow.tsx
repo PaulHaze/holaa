@@ -21,11 +21,11 @@ export function TrendingNow() {
     },
     autoplay: {
       delay: 1,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
     },
     breakpoints: {
       0: {
-        slidesPerView: 1.6,
+        slidesPerView: 1.3,
       },
       576: {
         slidesPerView: 1.7,
@@ -33,7 +33,7 @@ export function TrendingNow() {
       },
       992: {
         slidesPerView: 2.5,
-        spaceBetween: 5,
+        spaceBetween: 15,
       },
       1366: {
         slidesPerView: 3.5,

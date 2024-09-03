@@ -22,7 +22,7 @@ type MovieCardProps = {
 
 export function MovieCard({ movie }: MovieCardProps) {
   return (
-    <div className="movie-card-small relative w-[80%] overflow-hidden rounded-[40px] sm:w-[380px]">
+    <div className="movie-card-small relative w-[95%] max-w-[420px] overflow-hidden rounded-[40px]">
       <Image
         src={movie.image}
         alt="card-img"
