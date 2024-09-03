@@ -38,7 +38,10 @@ export function MovieCard() {
 
       {/* LINK BUTTON EVENTUALLY */}
       <div className="movie-link">
-        <MdPlayArrow size={62} />
+        <MdPlayArrow
+          size={62}
+          className="transition-all duration-500 ease-out hover:scale-125"
+        />
       </div>
 
       {/* <!-- Play Button --> */}
