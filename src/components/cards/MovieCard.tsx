@@ -18,11 +18,13 @@ import { trendingOneMoviesData as data } from '@/data/movie';
 //   },
 // );
 
-const movie = data[0];
+type MovieCardProps = {
+  movie: MovieCard;
+};
 
-export function MovieCard() {
+export function MovieCard({ movie }: MovieCardProps) {
   return (
-    <div className="movie-card-small group relative mb-20 w-[75%] overflow-hidden rounded-[40px] sm:w-[420px]">
+    <div className="movie-card-small relative mb-20 w-[80%] overflow-hidden rounded-[40px] sm:w-[380px]">
       <Image
         src={movie.image}
         alt="card-img"
