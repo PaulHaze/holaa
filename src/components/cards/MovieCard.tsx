@@ -6,8 +6,6 @@ import { IoStar } from 'react-icons/io5';
 import { GoClockFill } from 'react-icons/go';
 import { Md4K, MdPlayArrow } from 'react-icons/md';
 
-import { trendingOneMoviesData as data } from '@/data/movie';
-
 // const VideoOne = dynamic(
 //   async () => {
 //     const mod = await import('@/components/video/VideoOne');
@@ -24,7 +22,7 @@ type MovieCardProps = {
 
 export function MovieCard({ movie }: MovieCardProps) {
   return (
-    <div className="movie-card-small relative mb-20 w-[80%] overflow-hidden rounded-[40px] sm:w-[380px]">
+    <div className="movie-card-small relative w-[80%] overflow-hidden rounded-[40px] sm:w-[380px]">
       <Image
         src={movie.image}
         alt="card-img"

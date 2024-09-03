@@ -13,17 +13,41 @@ import { trendingOneMoviesData as movies } from '@/data/movie';
 export function TrendingNow() {
   const trendingMoviesSwiperOptions: SwiperOptions = {
     speed: 9000,
-    slidesPerView: 1,
     spaceBetween: 10,
     centeredSlides: true,
     loop: true,
     pagination: {
       clickable: true,
     },
-    modules: [Navigation, FreeMode],
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.6,
+      },
+      576: {
+        slidesPerView: 1.7,
+        spaceBetween: 5,
+      },
+      992: {
+        slidesPerView: 2.5,
+        spaceBetween: 5,
+      },
+      1366: {
+        slidesPerView: 3.5,
+        spaceBetween: 5,
+      },
+      1600: {
+        slidesPerView: 3.9,
+        spaceBetween: 5,
+      },
+    },
+    modules: [Navigation, FreeMode, Autoplay],
   };
   return (
-    <div className="mt-10 w-full md:mt-20">
+    <div className="mb-20 mt-10 w-full md:mt-20">
       <h2 className="mb-4 text-center font-heading">
         <span className="relative top-2 mr-2 inline-flex">
           <IoMdTrendingUp className="text-orange" />
@@ -34,7 +58,7 @@ export function TrendingNow() {
         {movies?.length && (
           <Swiper {...trendingMoviesSwiperOptions} className="swiper">
             {movies.map((movie: MovieCard, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide className="flex-center" key={index}>
                 <MovieCard movie={movie} />
               </SwiperSlide>
             ))}
@@ -44,15 +68,3 @@ export function TrendingNow() {
     </div>
   );
 }
-
-/* 
-
-        slidesPerView={4}
-        spaceBetween={30}
-        centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-*/
