@@ -1,4 +1,4 @@
-import { HeaderOne } from '@/components/sections/header';
+import { HeaderOne } from '@/components/sections';
 
 export default function TrendingMovies() {
   return (

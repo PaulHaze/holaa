@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 
-import { HeaderOne } from '@/components/sections/header';
+import { HeaderOne } from '@/components/sections';
 
 // type Props = {
 //   params: {
