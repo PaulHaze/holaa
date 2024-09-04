@@ -22,3 +22,9 @@ type MovieCard = {
   quality: string;
   categories: string[];
 };
+
+type Feature = {
+  image: any;
+  title: string;
+  description: string;
+};
