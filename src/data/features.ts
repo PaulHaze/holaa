@@ -3,32 +3,30 @@ import featherIconTwo from '@/assets/images/icons/thumbs_up.svg';
 import featherIconThree from '@/assets/images/icons/double_circle.svg';
 import featherIconFour from '@/assets/images/icons/double_play.svg';
 
-export const liveStreamingFeatureData = {
-  title: 'HOLAA IS OFFERS SUPERIOR LIVE TV STREAMING',
+export const featuresData = {
+  title: 'HOLAA HAS ALL THE LATEST MOVIE INFORMATION',
   features: [
     {
       image: featherIconOne,
-      title: 'Flexible Streaming',
-      description:
-        'Flexible streaming allows users to use customize their viewing experience',
+      title: 'Latest Trailers',
+      description: 'Watch the latest trailers the moment they are released',
     },
     {
       image: featherIconTwo,
-      title: 'Super fast quality',
+      title: 'Trending Movies',
       description:
-        'Flexible streaming allows users to use customize their viewing experience',
+        'See which movies are making a buzz and being talked about on social media',
     },
     {
       image: featherIconThree,
-      title: 'Watch from anywhere',
-      description:
-        'Flexible streaming allows users to use customize their viewing experience',
+      title: 'Screening Times',
+      description: 'See what being shown and when near you',
     },
     {
       image: featherIconFour,
-      title: 'Download and go',
+      title: 'Latest Streaming releases',
       description:
-        'Flexible streaming allows users to use customize their viewing experience',
+        'Get all the latest movie releases on every streaming platform',
     },
   ],
 };
