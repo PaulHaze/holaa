@@ -15,11 +15,13 @@
       rgba(24, 24, 24, 0.8) 100%
     );
     transition: all 300ms ease;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: soft-light;
   }
   .details {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
     @apply absolute bottom-0 -mb-[100%];
-    @apply w-full rounded-[40px] bg-stone-50/10 p-5 backdrop-blur-lg;
+    @apply w-full rounded-[40px] p-5;
     @apply text-center;
     @apply transition-all duration-500;
     .movie-name,
