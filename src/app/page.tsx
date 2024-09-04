@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <HeaderOne isHero={true} data={null} />
       <TrendingNow />
-      <h1 className="text-center">Feature Cards</h1>
+
       <FeatureCards />
     </main>
   );
