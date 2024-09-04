@@ -1,7 +1,7 @@
 'use client';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import type { SwiperOptions } from 'swiper/types';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import type { SwiperOptions } from 'swiper/types';
 
 export function TopTen() {
   return (
