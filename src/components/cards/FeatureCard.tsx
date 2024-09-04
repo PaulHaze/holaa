@@ -6,10 +6,14 @@ type FeatureCardProps = {
 
 export function FeatureCard({ feature }: FeatureCardProps) {
   return (
-    <div className="feature-card flex flex-col items-center rounded-[30px] bg-stone-600 py-10">
-      <Image src={feature.image} alt="icon" />
-      <h4 className="feature-title uppercase">{feature.title}</h4>
-      <p>{feature.description}</p>
+    <div className="bg-feature-card group flex flex-col items-center gap-4 rounded-[30px] py-8 transition-all duration-400">
+      <Image
+        src={feature.image}
+        alt="icon"
+        className="pb-1 transition-all duration-400 group-hover:scale-125"
+      />
+      <h5 className="uppercase">{feature.title}</h5>
+      <p className="opacity-80">{feature.description}</p>
     </div>
   );
 }

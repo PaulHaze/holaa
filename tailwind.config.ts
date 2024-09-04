@@ -132,6 +132,7 @@ export default {
           'linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%) border-box',
         pillinfo:
           'linear-gradient(133deg, rgba(255, 255, 255, 0.27) 12.14%, rgba(255, 255, 255, 0.09) 86.99%)',
+        'feature-card': 'linear-gradient(136deg, #1b1b1b 2.27%, #101010 100%)',
       },
     },
   },
