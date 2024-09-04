@@ -1,4 +1,9 @@
-import { HeaderOne, TrendingNow, FeatureCards } from '@/components/sections';
+import {
+  HeaderOne,
+  TrendingNow,
+  FeatureCards,
+  TopTen,
+} from '@/components/sections';
 
 export default function Home() {
   return (
@@ -6,6 +11,7 @@ export default function Home() {
       <HeaderOne isHero={true} data={null} />
       <TrendingNow />
       <FeatureCards />
+      <TopTen />
     </main>
   );
 }
