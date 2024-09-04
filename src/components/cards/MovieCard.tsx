@@ -1,10 +1,15 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+
 // import dynamic from 'next/dynamic';
 
 import { IoStar } from 'react-icons/io5';
 import { GoClockFill } from 'react-icons/go';
 import { Md4K, MdPlayArrow } from 'react-icons/md';
+
+import { convertToSlug } from '@/utils';
 
 // const VideoOne = dynamic(
 //   async () => {
@@ -21,6 +26,8 @@ type MovieCardProps = {
 };
 
 export function MovieCard({ movie }: MovieCardProps) {
+  const slug = convertToSlug(movie.title);
+
   return (
     <div className="movie-card-small relative w-[95%] max-w-[420px] overflow-hidden rounded-[40px]">
       <Image
@@ -50,7 +57,13 @@ export function MovieCard({ movie }: MovieCardProps) {
       {/* <!-- Movie Details --> */}
       <div className="details">
         <h2 className="movie-name uppercase">
-          <Link href={movie.href} className="gradient-link font-heading">
+          <Link
+            href={{
+              pathname: `movie-details/${slug}`,
+              query: { movie: movie.title },
+            }}
+            className="gradient-link font-heading"
+          >
             {movie.title}
           </Link>
         </h2>
