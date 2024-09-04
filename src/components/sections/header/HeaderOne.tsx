@@ -1,6 +1,6 @@
 import { MobileMenu, NavBar } from '@/components/nav';
 
-import { HeroOne } from '@/components/sections/hero';
+import { HeroOne } from '@/components/sections';
 
 interface HeaderOneProps {
   isHero: boolean;

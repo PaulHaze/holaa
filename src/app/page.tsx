@@ -1,7 +1,4 @@
-import { HeaderOne } from '@/components/sections/header';
-import { TrendingNow } from '@/components/sections/trending';
-import { FeatureCards } from '@/components/sections/features/FeatureCards';
-import {} from '';
+import { HeaderOne, TrendingNow, FeatureCards } from '@/components/sections';
 
 export default function Home() {
   return (
