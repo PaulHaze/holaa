@@ -8,19 +8,19 @@ import trendingImageSeven from '@/assets/images/trending/trending-7.webp';
 import trendingImageEight from '@/assets/images/trending/trending-8.webp';
 import trendingImageNine from '@/assets/images/trending/trending-9.webp';
 import trendingImageTen from '@/assets/images/trending/trending-10.webp';
-// import trendingImageEleven from '@/assets/images/trending/trending-11.webp';
-// import trendingImageTwelve from '@/assets/images/trending/trending-12.webp';
-// import trendingImageThirteen from '@/assets/images/trending/trending-13.webp';
+import trendingImageEleven from '@/assets/images/trending/trending-11.webp';
+import trendingImageTwelve from '@/assets/images/trending/trending-12.webp';
+import trendingImageThirteen from '@/assets/images/trending/trending-13.webp';
 // import trendingImageForteen from '@/assets/images/trending/trending-14.webp';
 // import trendingImageFifteen from '@/assets/images/trending/trending-15.webp';
-// import trendingImageSixteen from '@/assets/images/trending/trending-16.webp';
-// import trendingImageSeventeen from '@/assets/images/trending/trending-17.webp';
+import trendingImageSixteen from '@/assets/images/trending/trending-16.webp';
+import trendingImageSeventeen from '@/assets/images/trending/trending-17.webp';
 // import trendingImageEighteen from '@/assets/images/trending/trending-18.webp';
 // import trendingImageNineteen from '@/assets/images/trending/trending-19.webp';
 // import trendingImageTwenty from '@/assets/images/trending/trending-20.webp';
-// import trendingImageTwentyOne from '@/assets/images/trending/trending-21.webp';
-// import trendingImageTwentyTwo from '@/assets/images/trending/trending-22.webp';
-// import trendingImageTwentyThree from '@/assets/images/trending/trending-23.webp';
+import trendingImageTwentyOne from '@/assets/images/trending/trending-21.webp';
+import trendingImageTwentyTwo from '@/assets/images/trending/trending-22.webp';
+import trendingImageTwentyThree from '@/assets/images/trending/trending-23.webp';
 
 export const trendingOneMoviesData: MovieCard[] = [
   {
@@ -142,5 +142,128 @@ export const trendingOneMoviesData: MovieCard[] = [
     duration: '02h 30m',
     quality: '4k',
     categories: ['Action', 'Comedy', 'Crime'],
+  },
+];
+
+export const popularMoviesData: MovieCard[] = [
+  {
+    image: trendingImageEleven,
+    isRibbon: true,
+    count: '01',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'Wanted',
+    rating: '8.8',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Western', 'Crime'],
+  },
+  {
+    image: trendingImageThirteen,
+    isRibbon: true,
+    count: '02',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'Guardians of the Galaxy',
+    rating: '7.9',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Action', 'Comedy', 'Superhero'],
+  },
+  {
+    image: trendingImageSixteen,
+    isRibbon: true,
+    count: '03',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'A Stranger Calls',
+    rating: '8.2',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Drama', 'Suspense', 'Crime'],
+  },
+  {
+    image: trendingImageSeventeen,
+    isRibbon: true,
+    count: '04',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'Joan Of Arc',
+    rating: '7.8',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Historical', 'Action'],
+  },
+  {
+    image: trendingImageSix,
+    isRibbon: true,
+    count: '05',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'The Wolf Within',
+    rating: '6.9',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Action', 'Drama'],
+  },
+  {
+    image: trendingImageTwentyOne,
+    isRibbon: true,
+    count: '06',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'Queen Scarlet',
+    rating: '6.8',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Horror', 'Suspense', 'Crime'],
+  },
+  {
+    image: trendingImageTwentyTwo,
+    isRibbon: true,
+    count: '07',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'Star Wars - Wookies Revenge',
+    rating: '8.3',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['SciFi', 'Action'],
+  },
+  {
+    image: trendingImageTwentyThree,
+    isRibbon: true,
+    count: '08',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'The Dragons Way',
+    rating: '7.8',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Fantasy', 'Epic'],
+  },
+  {
+    image: trendingImageTwelve,
+    isRibbon: true,
+    count: '09',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'King Leer',
+    rating: '7.8',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Historical', 'Drama', 'Theatre'],
+  },
+  {
+    image: trendingImageFive,
+    isRibbon: true,
+    count: '10',
+    videoSrc: 'assets/video/video.mp4',
+    href: 'movie-details',
+    title: 'Kung Fu Panda 4',
+    rating: '6.8',
+    duration: '02h 30m',
+    quality: '4k',
+    categories: ['Animation', 'Comedy', 'Kids'],
   },
 ];

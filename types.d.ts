@@ -13,7 +13,7 @@ type Menu = {
 type MovieCard = {
   image: StaticImageData;
   isRibbon: boolean;
-  count: number;
+  count: number | string;
   videoSrc: string;
   href: string;
   title: string;
