@@ -6,7 +6,7 @@ type FeatureCardProps = {
 
 export function FeatureCard({ feature }: FeatureCardProps) {
   return (
-    <div className="bg-feature-card group flex flex-col items-center gap-4 rounded-[30px] px-10 py-8 transition-all duration-400 sm:px-4">
+    <div className="group flex flex-col items-center gap-4 rounded-[30px] bg-feature-card px-10 py-8 transition-all duration-400 sm:px-4">
       <Image
         src={feature.image}
         alt="icon"
