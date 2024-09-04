@@ -1,30 +1,30 @@
-import TrandingImageOne from '@/assets/images/trending/trending-1.webp';
-import TrandingImageTwo from '@/assets/images/trending/trending-2.webp';
-import TrandingImageThree from '@/assets/images/trending/trending-3.webp';
-import TrandingImageFour from '@/assets/images/trending/trending-4.webp';
-import TrandingImageFive from '@/assets/images/trending/trending-5.webp';
-import TrandingImageSix from '@/assets/images/trending/trending-6.webp';
-import TrandingImageSeven from '@/assets/images/trending/trending-7.webp';
-import TrandingImageEight from '@/assets/images/trending/trending-8.webp';
-import TrandingImageNine from '@/assets/images/trending/trending-9.webp';
-import TrandingImageTen from '@/assets/images/trending/trending-10.webp';
-// import TrandingImageEleven from '@/assets/images/trending/trending-11.webp';
-// import TrandingImageTwelve from '@/assets/images/trending/trending-12.webp';
-// import TrandingImageThirteen from '@/assets/images/trending/trending-13.webp';
-// import TrandingImageForteen from '@/assets/images/trending/trending-14.webp';
-// import TrandingImageFifteen from '@/assets/images/trending/trending-15.webp';
-// import TrandingImageSixteen from '@/assets/images/trending/trending-16.webp';
-// import TrandingImageSeventeen from '@/assets/images/trending/trending-17.webp';
-// import TrandingImageEighteen from '@/assets/images/trending/trending-18.webp';
-// import TrandingImageNineteen from '@/assets/images/trending/trending-19.webp';
-// import TrandingImageTwenty from '@/assets/images/trending/trending-20.webp';
-// import TrandingImageTwentyOne from '@/assets/images/trending/trending-21.webp';
-// import TrandingImageTwentyTwo from '@/assets/images/trending/trending-22.webp';
-// import TrandingImageTwentyThree from '@/assets/images/trending/trending-23.webp';
+import trendingImageOne from '@/assets/images/trending/trending-1.webp';
+import trendingImageTwo from '@/assets/images/trending/trending-2.webp';
+import trendingImageThree from '@/assets/images/trending/trending-3.webp';
+import trendingImageFour from '@/assets/images/trending/trending-4.webp';
+import trendingImageFive from '@/assets/images/trending/trending-5.webp';
+import trendingImageSix from '@/assets/images/trending/trending-6.webp';
+import trendingImageSeven from '@/assets/images/trending/trending-7.webp';
+import trendingImageEight from '@/assets/images/trending/trending-8.webp';
+import trendingImageNine from '@/assets/images/trending/trending-9.webp';
+import trendingImageTen from '@/assets/images/trending/trending-10.webp';
+// import trendingImageEleven from '@/assets/images/trending/trending-11.webp';
+// import trendingImageTwelve from '@/assets/images/trending/trending-12.webp';
+// import trendingImageThirteen from '@/assets/images/trending/trending-13.webp';
+// import trendingImageForteen from '@/assets/images/trending/trending-14.webp';
+// import trendingImageFifteen from '@/assets/images/trending/trending-15.webp';
+// import trendingImageSixteen from '@/assets/images/trending/trending-16.webp';
+// import trendingImageSeventeen from '@/assets/images/trending/trending-17.webp';
+// import trendingImageEighteen from '@/assets/images/trending/trending-18.webp';
+// import trendingImageNineteen from '@/assets/images/trending/trending-19.webp';
+// import trendingImageTwenty from '@/assets/images/trending/trending-20.webp';
+// import trendingImageTwentyOne from '@/assets/images/trending/trending-21.webp';
+// import trendingImageTwentyTwo from '@/assets/images/trending/trending-22.webp';
+// import trendingImageTwentyThree from '@/assets/images/trending/trending-23.webp';
 
 export const trendingOneMoviesData: MovieCard[] = [
   {
-    image: TrandingImageOne,
+    image: trendingImageOne,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -36,7 +36,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageTwo,
+    image: trendingImageTwo,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -48,7 +48,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageThree,
+    image: trendingImageThree,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -60,7 +60,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageFour,
+    image: trendingImageFour,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -72,7 +72,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageFive,
+    image: trendingImageFive,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -84,7 +84,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageSix,
+    image: trendingImageSix,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -96,7 +96,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageSeven,
+    image: trendingImageSeven,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -108,7 +108,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageEight,
+    image: trendingImageEight,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -120,7 +120,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageNine,
+    image: trendingImageNine,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
@@ -132,7 +132,7 @@ export const trendingOneMoviesData: MovieCard[] = [
     categories: ['Action', 'Comedy', 'Crime'],
   },
   {
-    image: TrandingImageTen,
+    image: trendingImageTen,
     isRibbon: false,
     count: 0,
     videoSrc: 'assets/video/video.mp4',
