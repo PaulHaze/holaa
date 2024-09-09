@@ -1,7 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+// import { Autoplay } from 'swiper/modules';
 
 import { CategoryCard } from '@/components/cards';
 
@@ -12,11 +12,11 @@ export function CategoryBrowser() {
     speed: 5000,
     spaceBetween: 10,
     loop: true,
-    autoplay: {
-      delay: 1,
-      pauseOnMouseEnter: true,
-    },
-    modules: [Autoplay],
+    // autoplay: {
+    //   delay: 1,
+    //   pauseOnMouseEnter: true,
+    // },
+    // modules: [Autoplay],
     breakpoints: {
       0: { slidesPerView: 1 },
       576: { slidesPerView: 2 },
