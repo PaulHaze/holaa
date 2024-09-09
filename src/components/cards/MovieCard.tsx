@@ -39,7 +39,7 @@ export function MovieCard({ movie }: MovieCardProps) {
       {/* <!-- Card Badge --> */}
       {movie.isRibbon && (
         <div className="movie-badge absolute">
-          <span>{movie.count}</span>
+          <span className="font-heading">{movie.count}</span>
         </div>
       )}
 

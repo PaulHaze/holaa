@@ -87,11 +87,12 @@
   }
 
   .movie-badge {
+    @apply font-heading;
     top: 10%;
     left: -1px;
     background-color: var(--body-bg);
     text-align: center;
-    font-family: var(--heading-font);
+    /* font-family: var(--heading-font); */
     font-size: 45px;
     font-weight: 600;
     line-height: 1;
