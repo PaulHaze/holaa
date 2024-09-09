@@ -3,8 +3,6 @@ import Image from 'next/image';
 
 import logo from '@/assets/images/logo.svg';
 
-import twitterIcon from '@/assets/images/socials/twitter.svg';
-
 import {
   RiFacebookFill,
   RiTwitterXFill,
@@ -24,10 +22,7 @@ export function Footer() {
           </Link>
           <p className="text-lg opacity-80">Connect with us!</p>
           <div className="mt-3 flex">
-            <Link
-              href="/"
-              className="social-media--item rounded-full bg-stone-600 p-2.5 text-white/80"
-            >
+            <Link href="/" className="social-link">
               <RiTwitterXFill />
             </Link>
           </div>
