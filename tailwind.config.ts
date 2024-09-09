@@ -134,6 +134,8 @@ export default {
         pillinfo:
           'linear-gradient(133deg, rgba(255, 255, 255, 0.27) 12.14%, rgba(255, 255, 255, 0.09) 86.99%)',
         'feature-card': 'linear-gradient(136deg, #1b1b1b 2.27%, #101010 100%)',
+        'gradient-footer':
+          'linear-gradient(95deg, #121212 7.27%, #1f1f1f 99.21%)',
       },
     },
   },

@@ -4,6 +4,7 @@ import {
   FeatureCards,
   TopTen,
   CategoryBrowser,
+  Footer,
 } from '@/components/sections';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <FeatureCards />
       <TopTen />
       <CategoryBrowser />
+      <Footer />
     </main>
   );
 }
