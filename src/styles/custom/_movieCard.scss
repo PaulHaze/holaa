@@ -34,14 +34,13 @@
       line-height: 1;
       li {
         display: inline-block;
-        @apply text-lg;
       }
     }
     .movie-info {
       li {
-        @apply inline-flex items-center gap-2 text-base-content;
+        @apply inline-flex items-center gap-1 text-base-content;
         &:not(:last-child) {
-          @apply mr-3;
+          @apply mr-4;
         }
       }
     }

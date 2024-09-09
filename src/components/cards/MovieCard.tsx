@@ -62,22 +62,22 @@ export function MovieCard({ movie }: MovieCardProps) {
               pathname: `movie-details/${slug}`,
               query: { movie: movie.title },
             }}
-            className="gradient-link font-heading"
+            className="gradient-link font-heading text-4xl md:text-5xl"
           >
             {movie.title}
           </Link>
         </h2>
         <ul className="movie-info">
           <li className="flex items-center">
-            <IoStar className="relative mb-[4px]" />
+            <IoStar className="relative mb-[1px]" />
             <span>{movie.rating}</span>
           </li>
           <li>
-            <GoClockFill className="relative mb-[3px]" />
+            <GoClockFill className="relative" />
             <span>{movie.duration}</span>
           </li>
           <li>
-            <Md4K className="relative mb-[3px]" />
+            <Md4K className="relative left-[2px] top-[1px] mb-[1px]" />
             <span>{movie.quality} Quality</span>
           </li>
         </ul>
