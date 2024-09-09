@@ -1,9 +1,9 @@
-import categoryImageOne from '@/assets/images/category/category-1.webp';
-import categoryImageTwo from '@/assets/images/category/category-2.webp';
-import categoryImageThree from '@/assets/images/category/category-3.webp';
-import categoryImageFour from '@/assets/images/category/category-4.webp';
-import categoryImageFive from '@/assets/images/category/category-5.webp';
-import categoryImageSix from '@/assets/images/category/category-6.webp';
+import categoryImageOne from '@/assets/images/categories/category-1.webp';
+import categoryImageTwo from '@/assets/images/categories/category-2.webp';
+import categoryImageThree from '@/assets/images/categories/category-3.webp';
+import categoryImageFour from '@/assets/images/categories/category-4.webp';
+import categoryImageFive from '@/assets/images/categories/category-5.webp';
+import categoryImageSix from '@/assets/images/categories/category-6.webp';
 
 export const categories: Category[] = [
   {
