@@ -68,66 +68,10 @@
   }
 }
 .category-card {
-  border-radius: 30px;
+  @apply relative flex flex-col rounded-[30px] p-6 pb-5 backdrop-blur-md;
+
   box-shadow: 0 0 0 2px #1d1d1d inset;
   background: linear-gradient(134deg, #151515 0.83%, #101010 100%);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  padding-bottom: 25px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media #{$lg-mobile} {
-    padding: 20px;
-  }
-
-  .thumbnail {
-    border-radius: 15px;
-    overflow: hidden;
-    margin-bottom: 30px;
-    .thumb-img {
-      transition: transform 300ms ease;
-    }
-  }
-
-  .details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
-    gap: 55px;
-    .title {
-      font-size: 30px;
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-top: 3px;
-      @media #{$laptop_device} {
-        font-size: 24px;
-      }
-      @media #{$sm_device} {
-        font-size: 24px;
-      }
-      @media #{$lg_mobile} {
-        font-size: 22px;
-      }
-    }
-    .circle-btn {
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.27);
-      transition: background-image 300ms ease;
-
-      &:hover {
-        background-image: linear-gradient(
-            139deg,
-            rgba(255, 255, 255, 0.18) 19.65%,
-            rgba(255, 255, 255, 0.03) 50.98%
-          ),
-          linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%);
-      }
-    }
-  }
 
   &::before {
     content: '';
@@ -152,8 +96,12 @@
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     opacity: 0;
-    // z-index: -1;
     transition: opacity 0.3s ease;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
   }
 
   &--two {
@@ -249,26 +197,6 @@
 
     &::before {
       border-radius: 20px;
-    }
-  }
-
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
-
-    .thumbnail {
-      .thumb-img {
-        transform: scale(1.1);
-      }
-    }
-    .details .circle-btn {
-      background-image: linear-gradient(
-          139deg,
-          rgba(255, 255, 255, 0.18) 19.65%,
-          rgba(255, 255, 255, 0.03) 50.98%
-        ),
-        linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%);
     }
   }
 }
