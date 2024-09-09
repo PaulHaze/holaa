@@ -5,6 +5,14 @@ import logo from '@/assets/images/logo.svg';
 
 import twitterIcon from '@/assets/images/socials/twitter.svg';
 
+import {
+  RiFacebookFill,
+  RiTwitterXFill,
+  RiInstagramFill,
+  RiPinterestFill,
+  RiYoutubeFill,
+} from 'react-icons/ri';
+
 export function Footer() {
   return (
     <div className="bg-gradient-footer mt-[500px] rounded-t-3xl p-8">
@@ -16,12 +24,11 @@ export function Footer() {
           </Link>
           <p className="text-lg opacity-80">Connect with us!</p>
           <div className="mt-3 flex">
-            <Link href="/" className="social-media--item text-white">
-              <Image
-                src={twitterIcon}
-                alt="twitter icon"
-                className="fill-white text-white"
-              />
+            <Link
+              href="/"
+              className="social-media--item rounded-full bg-stone-600 p-2.5 text-white/80"
+            >
+              <RiTwitterXFill />
             </Link>
           </div>
         </div>
