@@ -11,6 +11,7 @@ export default {
       sans: ['var(--body-font)'],
       body: ['var(--body-font)'],
       heading: ['var(--heading-font)'],
+      lowball: ['var(--heading-font)'],
       secondary: ['var(--jost-font)'],
       narrow: ['var(--bigShoulder-font)'],
     },
