@@ -49,6 +49,8 @@ export default {
         'menu-active': '#ff6f3f',
         orange: '#ff6f3f',
         paragraph: '#a9a9a9',
+        'social-bg': '#1d1d1d',
+        'social-icon': '#e2e2e2',
       },
       fontSize: {
         banner: '9rem',
