@@ -1,6 +1,9 @@
 @import './utils/_variables.scss';
 @import './utils/_mixins.scss';
 
+.categories-slider .swiper-wrapper {
+  transition-timing-function: linear;
+}
 .category-list-area {
   .header {
     padding-bottom: 20px;
