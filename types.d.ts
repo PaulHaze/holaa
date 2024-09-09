@@ -28,3 +28,9 @@ type Feature = {
   title: string;
   description: string;
 };
+
+type Category = {
+  image: any;
+  title: string;
+  href: string;
+};
