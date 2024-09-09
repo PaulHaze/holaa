@@ -1,4 +1,4 @@
-export * from './categories/CategorySlider';
+export * from './categories/CategoryBrowser';
 export * from './features/FeatureCards';
 export * from './footer/Footer';
 export * from './header/HeaderOne';

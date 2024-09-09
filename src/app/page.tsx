@@ -3,6 +3,7 @@ import {
   TrendingNow,
   FeatureCards,
   TopTen,
+  CategoryBrowser,
 } from '@/components/sections';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <TrendingNow />
       <FeatureCards />
       <TopTen />
+      <CategoryBrowser />
     </main>
   );
 }
