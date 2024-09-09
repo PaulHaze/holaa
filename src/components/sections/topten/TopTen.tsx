@@ -42,7 +42,7 @@ export function TopTen() {
     },
   };
   return (
-    <div className="px-10 pt-14">
+    <div className="px-2 py-14 md:px-8">
       <h2 className="mb-10 text-center">Top Ten Shows: AUSTRALIA</h2>
       <div className="top-ten">
         {movies.length && (

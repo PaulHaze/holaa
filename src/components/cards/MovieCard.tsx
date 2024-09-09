@@ -56,18 +56,18 @@ export function MovieCard({ movie }: MovieCardProps) {
 
       {/* <!-- Movie Details --> */}
       <div className="details">
-        <h2 className="movie-name uppercase">
-          <Link
-            href={{
-              pathname: `movie-details/${slug}`,
-              query: { movie: movie.title },
-            }}
-            className="gradient-link font-heading text-4xl md:text-5xl"
-          >
-            {movie.title}
-          </Link>
-        </h2>
-        <ul className="movie-info">
+        <Link
+          href={{
+            pathname: `movie-details/${slug}`,
+            query: { movie: movie.title },
+          }}
+          className="gradient-link font-heading text-3xl uppercase md:text-4xl"
+        >
+          {movie.title}
+        </Link>
+
+        {/* MOVIE INFO */}
+        <ul className="movie-info mb-3">
           <li className="flex items-center">
             <IoStar className="relative mb-[1px]" />
             <span>{movie.rating}</span>
@@ -81,6 +81,8 @@ export function MovieCard({ movie }: MovieCardProps) {
             <span>{movie.quality} Quality</span>
           </li>
         </ul>
+
+        {/* MOVIE CATEGORIES */}
         {movie.categories && movie.categories.length > 0 && (
           <ul className="movie-type">
             {movie.categories.map((category, index) => (

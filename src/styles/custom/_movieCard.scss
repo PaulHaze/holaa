@@ -21,16 +21,12 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     @apply absolute bottom-0 -mb-[100%];
-    @apply w-full rounded-[40px] p-5;
+    @apply w-full rounded-[40px] p-3;
     @apply text-center;
     @apply transition-all duration-500;
-    .movie-name,
-    .movie-info {
-      @apply mb-1;
-    }
 
     ul {
-      @apply text-base-content/90;
+      @apply mt-1 text-base-content/90;
       line-height: 1;
       li {
         display: inline-block;
