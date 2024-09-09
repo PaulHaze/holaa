@@ -1,8 +1,10 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 
 import { HeaderOne } from '@/components/sections';
+
+import { convertSlugToTitle } from '@/utils';
 
 // type Props = {
 //   params: {
@@ -11,8 +13,9 @@ import { HeaderOne } from '@/components/sections';
 // };
 
 export default function TrendingMovieDetails() {
-  const searchParams = useSearchParams();
-  const movieTitle = searchParams.get('movie');
+  const { movie } = useParams();
+  const movieTitle = convertSlugToTitle(movie as string);
+
   return (
     <main>
       <HeaderOne isHero={false} data={null} />
