@@ -3,6 +3,8 @@ import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
 import { Dosis, Jost, Big_Shoulders_Display } from 'next/font/google';
 
+import { MobileMenu, NavBar } from '@/components/nav';
+
 import { UiProvider } from '@/context/UiContext';
 
 import 'swiper/css/bundle';
@@ -107,7 +109,13 @@ export default function RootLayout({
         className={`${lowball.variable} ${dosisBody.variable} ${jost.variable} ${bigShouldersDisplay.variable} bg-base-100`}
       >
         <ThemeProvider>
-          <UiProvider>{children}</UiProvider>
+          <UiProvider>
+            <header className="header navbar-area relative z-99">
+              <NavBar />
+              <MobileMenu />
+            </header>
+            {children}
+          </UiProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -86,9 +86,7 @@ export function NavBar() {
   //#endregion
 
   return (
-    <nav
-      className={cn('nav-container', isScrollingUp ? 'show-nav' : 'hide-nav')}
-    >
+    <nav className={cn('nav-container show-nav')}>
       <div className="mx-auto flex w-full max-w-xl items-center justify-between xl:px-4">
         {/* LOGO */}
         <Link href="/" className="main-logo flex-shrink-0">

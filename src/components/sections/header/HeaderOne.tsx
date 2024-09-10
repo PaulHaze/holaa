@@ -1,4 +1,4 @@
-import { MobileMenu, NavBar } from '@/components/nav';
+// import { MobileMenu, NavBar } from '@/components/nav';
 
 import { HeroOne } from '@/components/hero/HeroOne';
 
@@ -9,11 +9,11 @@ interface HeaderOneProps {
 
 export function HeaderOne({ isHero = true, data = null }: HeaderOneProps) {
   return (
-    <header className="header navbar-area relative z-99">
+    <header className="">
       {isHero && <HeroOne />}
       {data?.breadcrumb && <p>BREADCRUMB</p>}
-      <NavBar />
-      <MobileMenu />
+      {/* <NavBar />
+      <MobileMenu /> */}
     </header>
   );
 }
