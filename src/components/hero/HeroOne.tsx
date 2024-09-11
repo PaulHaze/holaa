@@ -13,8 +13,6 @@ import { HeroCards } from '@/components/cards';
 import { IoPlay } from 'react-icons/io5';
 import { HiArrowLongRight, HiArrowLongLeft } from 'react-icons/hi2';
 
-import { cn } from '@/utils';
-
 import { heroOneData as data } from '@/data/hero';
 
 const VideoTwo = dynamic(
@@ -101,7 +99,7 @@ export function HeroOne() {
                     <div className="space-x-4 md:space-x-5">
                       <Link
                         href="movie-details"
-                        className={cn('hl-btn btn-base py-5 uppercase')}
+                        className="hl-btn btn-base py-5 uppercase"
                       >
                         <IoPlay className="" size={22} />
                         <span className="font-body font-semibold">

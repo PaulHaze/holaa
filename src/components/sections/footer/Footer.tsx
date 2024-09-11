@@ -50,9 +50,22 @@ export function Footer() {
             <Link href="/blog">Privacy</Link>
           </div>
         </div>
-        <div className="mb-5 flex">
-          <div className="w-full bb">sign in</div>
-          <div className="w-full bb2">github</div>
+        <div className="mb-5 flex h-[55px] gap-4">
+          <Link
+            href="account/sign-in"
+            className="hl-btn big-btn w-full items-stretch border border-stone-600 uppercase text-stone-400 transition-all duration-300 hover:border-stone-50 hover:text-stone-50 sm:w-auto"
+          >
+            <span className="font-body font-semibold uppercase">
+              SIGN IN / SIGN UP
+            </span>
+          </Link>
+
+          <Link
+            className="hl-btn big-btn hover:text-stone-50m w-full border border-stone-600 uppercase text-stone-400 transition-all duration-300 hover:border-stone-50 sm:w-auto"
+            href="/"
+          >
+            VIEW ON GITHUB
+          </Link>
         </div>
       </div>
       <hr className="opacity-10" />
