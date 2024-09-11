@@ -13,10 +13,10 @@ import {
 
 export function Footer() {
   return (
-    <div className="bg-gradient-footer mt-[500px] rounded-t-3xl p-8">
+    <div className="mt-[500px] rounded-t-3xl bg-gradient-footer p-8">
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {/* LOGO + ICONS */}
-        <div className="min-h-[200px] bb">
+        <div className="mb-5">
           <Link href="/">
             <Image src={logo} alt="logo" className="mb-4" />
           </Link>
@@ -40,15 +40,22 @@ export function Footer() {
           </div>
         </div>
 
-        {/* CATEGORIES */}
-
-        <div className="help min-h-[200px] bb">
+        {/* USEFUL LINKS */}
+        <div className="mb-5">
           <h5>USEFUL LINKS</h5>
+          <div className="flex flex-col space-y-1 text-lg opacity-60">
+            <Link href="/faq">FAQ</Link>
+            <Link href="/about">About</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/blog">Privacy</Link>
+          </div>
         </div>
-        <div className="buttons min-h-[200px] bb2">
-          <h5>buttons</h5>
+        <div className="mb-5 flex">
+          <div className="w-full bb">sign in</div>
+          <div className="w-full bb2">github</div>
         </div>
       </div>
+      <hr className="opacity-10" />
       <div className="privacy">
         <h5>privacy</h5>
       </div>
