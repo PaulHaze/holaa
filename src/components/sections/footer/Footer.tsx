@@ -15,7 +15,7 @@ import {
 
 export function Footer() {
   return (
-    <div className="mt-[500px] rounded-t-3xl bg-gradient-footer p-8">
+    <div className="rounded-t-3xl bg-gradient-footer p-8">
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {/* LOGO + ICONS */}
         <div className="mb-5">
@@ -56,12 +56,12 @@ export function Footer() {
 
         {/* ACCOUNT + GITHUB */}
         <div className="mb-5 flex items-center gap-4 md:flex-shrink md:flex-col md:pl-20">
-          <div className="w-1/2">
+          <div className="w-1/2 md:w-full md:self-start">
             <h4>Built by Paul Hayes</h4>
           </div>
 
           <Link
-            className="hl-btn w-auto border border-stone-600 uppercase text-stone-400 transition-all duration-300 flex-center hover:border-stone-50 hover:text-stone-50 sm:w-auto"
+            className="hl-btn github-btn w-auto border border-stone-600 uppercase text-stone-400 transition-all duration-300 flex-center hover:border-stone-50 hover:text-stone-800 sm:w-auto md:self-start"
             href="/"
           >
             <span>
@@ -72,8 +72,8 @@ export function Footer() {
         </div>
       </div>
       <hr className="opacity-10" />
-      <div className="privacy">
-        <h5>privacy</h5>
+      <div className="privacy mt-4 opacity-20 flex-center">
+        <p> &copy; Artemist 2024</p>
       </div>
     </div>
   );
